@@ -1,0 +1,50 @@
+{
+  "name": "ricardojrm.com",
+  "version": "1.0.0",
+  "description": "ricardojrm.com",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "npm run build && next export",
+    "lint": "eslint --ignore-path .eslintignore",
+    "lint:staged": "lint-staged",
+    "now-dev": "now dev",
+    "deploy": "now"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.6.0",
+    "@material-ui/icons": "^4.5.1",
+    "@types/core-js": "^2.5.2",
+    "@types/next": "^8.0.5",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "core-js": "^3.2.1",
+    "next": "^9.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "typescript": "^3.6.2",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/parser": "^2.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "lint-staged": "^8.2.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.18.2"
+  },
+  "pre-commit": "lint:staged",
+  "lint-staged": {
+    "linters": {
+      "*.{js,jsx,ts,tsx}": [
+        "npm run lint"
+      ]
+    }
+  }
+}

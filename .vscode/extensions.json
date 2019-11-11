@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "file-icons.file-icons",
+    "jpoissonnier.vscode-styled-components",
+    "kamikillerto.vscode-colorize",
+    "tyriar.sort-lines",
+    "wix.vscode-import-cost"
+  ]
+}
