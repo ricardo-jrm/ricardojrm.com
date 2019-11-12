@@ -31,6 +31,9 @@ const globals = {
   dNone: {
     display: 'none',
   },
+  dInBlock: {
+    display: 'inline-block',
+  },
   imgR: {
     userSelect: 'none' as
       | 'contain'
@@ -51,6 +54,9 @@ const globals = {
   },
   imgLogo: {
     maxHeight: appTheme.typography.h1.fontSize,
+  },
+  fwBold: {
+    fontWeight: 700,
   },
 };
 
