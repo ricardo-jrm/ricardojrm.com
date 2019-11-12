@@ -55,8 +55,14 @@ const globals = {
   imgLogo: {
     maxHeight: appTheme.typography.h1.fontSize,
   },
+  crsPointer: {
+    cursor: 'pointer',
+  },
   fwBold: {
     fontWeight: 700,
+  },
+  fwSemiBold: {
+    fontWeight: 600,
   },
 };
 
