@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import App from 'next/app';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -17,12 +17,12 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <StrictMode>
+      <>
         <ThemeProvider theme={appTheme}>
           <CssBaseline />
           <Component {...pageProps} />
         </ThemeProvider>
-      </StrictMode>
+      </>
     );
   }
 }
