@@ -54,14 +54,14 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
             </Box>
           </Grid>
           <Grid xs={12} item>
-            <Box ml={0.8}>
+            <Box mb={2}>
               <Typography variant="h4" component="h2">
-                {'React Developer'}
+                React Developer
               </Typography>
             </Box>
           </Grid>
           <Grid xs={12} md={3} lg={4} item>
-            <Box my={1}>
+            <Box p={2}>
               <ButtonGroup fullWidth>
                 <Button size="large" onClick={() => setMenu(0)} className={`${classes.button}`}>
                   <Typography className={`${classes.crsPointer}`} variant="h6" component="h3">
@@ -102,18 +102,18 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 </Button>
               </ButtonGroup>
             </Box>
-            <Box textAlign="center">
-              <Box mx={1} display="inline-block">
+            <Box textAlign="center" mt={1}>
+              <Box display="inline-block">
                 <Link href="/" color="inherit" onClick={preventDefault}>
                   <i className="fas fa-at fa-4x" />
                 </Link>
               </Box>
-              <Box mx={1} display="inline-block">
+              <Box mx={2} display="inline-block">
                 <Link href="/" color="inherit" onClick={preventDefault}>
                   <i className="fab fa-linkedin fa-4x" />
                 </Link>
               </Box>
-              <Box mx={1} display="inline-block">
+              <Box display="inline-block">
                 <Link href="/" color="inherit" onClick={preventDefault}>
                   <i className="fab fa-github fa-4x" />
                 </Link>
@@ -122,7 +122,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
           </Grid>
           <Grid xs={12} md={9} lg={8} item>
             <Box p={2}>
-              <Box display={menu === 0 ? 'block' : 'none'}>
+              <Box display={menu === 0 ? 'block' : 'none'} className="animated fadeIn">
                 <Typography variant="body1">
                   - Remote Job
                   <br />
@@ -130,7 +130,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                   <br />- Consulting
                 </Typography>
               </Box>
-              <Box display={menu === 1 ? 'block' : 'none'}>
+              <Box display={menu === 1 ? 'block' : 'none'} className="animated fadeIn">
                 <Typography variant="body1">
                   - Senior Front End Developer
                   <br />
@@ -147,7 +147,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                   {'  - Material-UI'}
                 </Typography>
               </Box>
-              <Box display={menu === 2 ? 'block' : 'none'}>
+              <Box display={menu === 2 ? 'block' : 'none'} className="animated fadeIn">
                 <Typography variant="body1">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore numquam nostrum
                   repudiandae unde similique! Beatae eveniet distinctio accusantium maxime eius ipsa

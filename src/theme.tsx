@@ -5,6 +5,7 @@ import red from '@material-ui/core/colors/red';
 
 const appTheme = /* resposiveFontSizes( */ createMuiTheme({
     palette: {
+      // type: 'light',
       primary: indigo,
       secondary: pink,
       error: red,
@@ -35,7 +36,6 @@ const appTheme = /* resposiveFontSizes( */ createMuiTheme({
       h1: {
         fontFamily: ['Radiance-Black'].join(','),
         fontSize: '10vw',
-        lineHeight: '8vw',
       },
       h2: {
         fontFamily: ['Radiance-Black'].join(','),
@@ -45,7 +45,9 @@ const appTheme = /* resposiveFontSizes( */ createMuiTheme({
       },
       h4: {
         fontFamily: ['Radiance-Black'].join(','),
-        fontSize: '4vw',
+        fontSize: '3vw',
+        // Fix awkwrd spacing
+        // letterSpacing: '-0.01562em',
         // lineHeight: '3vw',
       },
       h5: {
@@ -54,9 +56,11 @@ const appTheme = /* resposiveFontSizes( */ createMuiTheme({
       h6: {
         fontFamily: ['Radiance'].join(','),
         fontWeight: 600,
+        fontSize: '1.5rem',
       },
       body1: {
         fontWeight: 500,
+        fontSize: '1.1rem',
       },
     },
   }) /* ) */;
