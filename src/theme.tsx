@@ -13,6 +13,9 @@ const appTheme = /* resposiveFontSizes( */ createMuiTheme({
       background: {
         default: '#fafafa',
       },
+      text: {
+        primary: '#000',
+      },
     },
     typography: {
       fontFamily: [
@@ -20,6 +23,8 @@ const appTheme = /* resposiveFontSizes( */ createMuiTheme({
         'BlinkMacSystemFont',
         '"Segoe UI"',
         'Roboto',
+        'Radiance',
+        'Radiance-Black',
         '"Helvetica Neue"',
         'Arial',
         'sans-serif',
@@ -27,6 +32,32 @@ const appTheme = /* resposiveFontSizes( */ createMuiTheme({
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
       ].join(','),
+      h1: {
+        fontFamily: ['Radiance-Black'].join(','),
+        fontSize: '10vw',
+        lineHeight: '8vw',
+      },
+      h2: {
+        fontFamily: ['Radiance-Black'].join(','),
+      },
+      h3: {
+        fontFamily: ['Radiance-Black'].join(','),
+      },
+      h4: {
+        fontFamily: ['Radiance-Black'].join(','),
+        fontSize: '4vw',
+        // lineHeight: '3vw',
+      },
+      h5: {
+        fontFamily: ['Radiance'].join(','),
+      },
+      h6: {
+        fontFamily: ['Radiance'].join(','),
+        fontWeight: 600,
+      },
+      body1: {
+        fontWeight: 500,
+      },
     },
   }) /* ) */;
 

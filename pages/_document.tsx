@@ -39,6 +39,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
+          <link href="/static/styles/fonts.css" rel="stylesheet" />
           <link href="/static/styles/main.css" rel="stylesheet" />
         </Head>
         <body>

@@ -40,7 +40,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
         <Grid container item xs={12} sm={11} md={10} lg={9} justify="flex-start">
           <Grid xs={12} item>
             <Box display="inline-block" fontWeight={700}>
-              <Typography className={`${classes.fwBold} ${classes.title} transitions`} variant="h1">
+              <Typography className={`${classes.title} transitions`} variant="h1">
                 RicardoJRM
               </Typography>
             </Box>
@@ -54,8 +54,8 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
             </Box>
           </Grid>
           <Grid xs={12} item>
-            <Box>
-              <Typography className={`${classes.fwBold}`} variant="h4" component="h2">
+            <Box ml={0.8}>
+              <Typography variant="h4" component="h2">
                 {'React Developer'}
               </Typography>
             </Box>
@@ -64,14 +64,11 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
             <Box my={1}>
               <ButtonGroup fullWidth>
                 <Button size="large" onClick={() => setMenu(0)} className={`${classes.button}`}>
-                  <Typography
-                    className={`${classes.fwSemiBold} ${classes.crsPointer}`}
-                    variant="h6"
-                    component="h3">
+                  <Typography className={`${classes.crsPointer}`} variant="h6" component="h3">
                     <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {'<'}
                     </span>
-                    ForHire
+                    {menu === 0 ? 'ForHire' : 'For Hire'}
                     <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {' />'}
                     </span>
@@ -80,10 +77,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
               </ButtonGroup>
               <ButtonGroup fullWidth>
                 <Button size="large" onClick={() => setMenu(1)} className={classes.button}>
-                  <Typography
-                    className={`${classes.fwSemiBold} ${classes.crsPointer}`}
-                    variant="h6"
-                    component="h3">
+                  <Typography className={`${classes.crsPointer}`} variant="h6" component="h3">
                     <span className={menu === 1 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {'<'}
                     </span>
@@ -96,10 +90,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
               </ButtonGroup>
               <ButtonGroup fullWidth>
                 <Button size="large" onClick={() => setMenu(2)} className={classes.button}>
-                  <Typography
-                    className={`${classes.fwSemiBold} ${classes.crsPointer}`}
-                    variant="h6"
-                    component="h3">
+                  <Typography className={`${classes.crsPointer}`} variant="h6" component="h3">
                     <span className={menu === 2 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {'<'}
                     </span>
@@ -111,52 +102,58 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 </Button>
               </ButtonGroup>
             </Box>
+            <Box textAlign="center">
+              <Box mx={1} display="inline-block">
+                <Link href="/" color="inherit" onClick={preventDefault}>
+                  <i className="fas fa-at fa-4x" />
+                </Link>
+              </Box>
+              <Box mx={1} display="inline-block">
+                <Link href="/" color="inherit" onClick={preventDefault}>
+                  <i className="fab fa-linkedin fa-4x" />
+                </Link>
+              </Box>
+              <Box mx={1} display="inline-block">
+                <Link href="/" color="inherit" onClick={preventDefault}>
+                  <i className="fab fa-github fa-4x" />
+                </Link>
+              </Box>
+            </Box>
           </Grid>
           <Grid xs={12} md={9} lg={8} item>
-            <Box display={menu === 0 ? 'block' : 'none'}>
-              <Typography variant="body1">
-                - Remote Job
-                <br />
-                - Freelance Work
-                <br />- Consulting
-              </Typography>
-            </Box>
-            <Box display={menu === 1 ? 'block' : 'none'}>
-              <Typography variant="body1">
-                - Senior Front End Developer
-                <br />
-                - Full Remote
-                <br />
-                Effective Stack:
-                <br />
-                {'  - React.js (3+ yrs)'}
-                <br />
-                {'  - Next.js'}
-                <br />
-                {'  - Typescript'}
-                <br />
-                {'  - Material-UI'}
-              </Typography>
-            </Box>
-            <Box display={menu === 2 ? 'block' : 'none'}>
-              <Typography variant="body1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore numquam nostrum
-                repudiandae unde similique! Beatae eveniet distinctio accusantium maxime eius ipsa
-                qui deleniti, iste aperiam officia, eligendi autem. Deserunt, adipisci.
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12}>
-            <Box>
-              <Link href="/" color="inherit" onClick={preventDefault}>
-                <i className="fas fa-at fa-4x" />
-              </Link>
-              <Link href="/" color="inherit" onClick={preventDefault}>
-                <i className="fab fa-linkedin fa-4x" />
-              </Link>
-              <Link href="/" color="inherit" onClick={preventDefault}>
-                <i className="fab fa-github fa-4x" />
-              </Link>
+            <Box p={2}>
+              <Box display={menu === 0 ? 'block' : 'none'}>
+                <Typography variant="body1">
+                  - Remote Job
+                  <br />
+                  - Freelance Work
+                  <br />- Consulting
+                </Typography>
+              </Box>
+              <Box display={menu === 1 ? 'block' : 'none'}>
+                <Typography variant="body1">
+                  - Senior Front End Developer
+                  <br />
+                  - Full Remote
+                  <br />
+                  Effective Stack:
+                  <br />
+                  {'  - React.js (3+ yrs)'}
+                  <br />
+                  {'  - Next.js'}
+                  <br />
+                  {'  - Typescript'}
+                  <br />
+                  {'  - Material-UI'}
+                </Typography>
+              </Box>
+              <Box display={menu === 2 ? 'block' : 'none'}>
+                <Typography variant="body1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore numquam nostrum
+                  repudiandae unde similique! Beatae eveniet distinctio accusantium maxime eius ipsa
+                  qui deleniti, iste aperiam officia, eligendi autem. Deserunt, adipisci.
+                </Typography>
+              </Box>
             </Box>
           </Grid>
         </Grid>
