@@ -14,6 +14,8 @@ import { globals } from 'src/theme';
 import HomeAbout from 'components/HomeAbout';
 import HomeProfile from 'components/HomeProfile';
 import HomeHire from 'components/HomeHire';
+import HomeXP from 'components/HomeXP';
+import HomeSkills from 'components/HomeSkills';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     height: '100vh',
+    opacity: 1
   },
   button: {
     margin: theme.spacing(0.5),
@@ -37,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 const HomeHero = ({  }: IHomeHeroProps): any => {
   const classes = useStyles();
 
-  const [menu, setMenu] = useState(0);
+  const [menu, setMenu] = useState(1);
 
   const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 
@@ -70,19 +73,6 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
           <Grid xs={12} md={3} lg={4} item>
             <Box p={2}>
               <ButtonGroup fullWidth>
-                <Button size="large" onClick={() => setMenu(0)} className={classes.button}>
-                  <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
-                    <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
-                      {'<'}
-                    </span>
-                    About
-                    <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
-                      {' />'}
-                    </span>
-                  </Typography>
-                </Button>
-              </ButtonGroup>
-              <ButtonGroup fullWidth>
                 <Button size="large" onClick={() => setMenu(1)} className={classes.button}>
                   <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
                     <span className={menu === 1 ? `transitions` : `transitions ${classes.vHidden}`}>
@@ -96,6 +86,32 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 </Button>
               </ButtonGroup>
               <ButtonGroup fullWidth>
+                <Button size="large" onClick={() => setMenu(3)} className={classes.button}>
+                  <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                    <span className={menu === 3 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {'<'}
+                    </span>
+                    Experience
+                    <span className={menu === 3 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {' />'}
+                    </span>
+                  </Typography>
+                </Button>
+              </ButtonGroup>
+              <ButtonGroup fullWidth>
+                <Button size="large" onClick={() => setMenu(4)} className={classes.button}>
+                  <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                    <span className={menu === 4 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {'<'}
+                    </span>
+                    Skills
+                    <span className={menu === 4 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {' />'}
+                    </span>
+                  </Typography>
+                </Button>
+              </ButtonGroup>
+              <ButtonGroup fullWidth>
                 <Button size="large" onClick={() => setMenu(2)} className={`${classes.button}`}>
                   <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
                     <span className={menu === 2 ? `transitions` : `transitions ${classes.vHidden}`}>
@@ -103,6 +119,19 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                     </span>
                     {menu === 2 ? 'ForHire' : 'For Hire'}
                     <span className={menu === 2 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {' />'}
+                    </span>
+                  </Typography>
+                </Button>
+              </ButtonGroup>
+              <ButtonGroup fullWidth>
+                <Button size="large" onClick={() => setMenu(0)} className={classes.button}>
+                  <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                    <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {'<'}
+                    </span>
+                    About
+                    <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {' />'}
                     </span>
                   </Typography>
@@ -137,6 +166,12 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
               </Box>
               <Box display={menu === 2 ? 'block' : 'none'} className="animated fadeIn">
                 <HomeHire />
+              </Box>
+              <Box display={menu === 3 ? 'block' : 'none'} className="animated fadeIn">
+                <HomeXP />
+              </Box>
+              <Box display={menu === 4 ? 'block' : 'none'} className="animated fadeIn">
+                <HomeSkills />
               </Box>
             </Box>
           </Grid>

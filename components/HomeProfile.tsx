@@ -13,6 +13,20 @@ const useStyles = makeStyles((theme) => ({
     width: '35px',
     height: 'auto',
     marginRight: theme.spacing(1.2),
+    userSelect: 'none' as
+      | 'contain'
+      | 'all'
+      | '-moz-initial'
+      | 'inherit'
+      | 'initial'
+      | 'revert'
+      | 'unset'
+      | 'auto'
+      | 'none'
+      | 'text'
+      | '-moz-none'
+      | 'element'
+      | undefined,
   },
   profBox: {
     height: '45px',
@@ -25,7 +39,7 @@ const HomeProfile = (): any => {
   return (
     <Box alignItems="center">
       <Typography variant="h6">
-        Senior Front End Developer from Portugal, with an effective stack of:
+        Senior Front End Developer near Lisbon, Portugal with an effective stack of:
       </Typography>
 
       <Box display="flex" className={`${classes.profBox}`} alignItems="center">
