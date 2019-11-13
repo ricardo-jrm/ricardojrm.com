@@ -2,7 +2,7 @@ import React from 'react';
 
 import Typography from '@material-ui/core/Typography';
 
-const HomeAbout = ({  }: IHomeAboutProps): any => {
+const HomeAbout = (): any => {
   return (
     <>
       <Typography variant="body1">
@@ -13,7 +13,5 @@ const HomeAbout = ({  }: IHomeAboutProps): any => {
     </>
   );
 };
-
-export interface IHomeAboutProps {}
 
 export default HomeAbout;

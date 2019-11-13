@@ -1,29 +1,106 @@
 import React from 'react';
 
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
 
-const HomeProfile = ({  }: IHomeProfileProps): any => {
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+
+// import { globals } from 'src/theme';
+
+const useStyles = makeStyles((theme) => ({
+  profIcon: {
+    width: '35px',
+    height: 'auto',
+    marginRight: theme.spacing(1.2),
+  },
+  profBox: {
+    height: '45px',
+  },
+}));
+
+const HomeProfile = (): any => {
+  const classes = useStyles();
+
   return (
-    <>
-      <Typography variant="body1">
-        - Senior Front End Developer
-        <br />
-        - Full Remote
-        <br />
-        Effective Stack:
-        <br />
-        {'  - React.js (3+ yrs)'}
-        <br />
-        {'  - Next.js'}
-        <br />
-        {'  - Typescript'}
-        <br />
-        {'  - Material-UI'}
+    <Box alignItems="center">
+      <Typography variant="h6">
+        Senior Front End Developer from Portugal, with an effective stack of:
       </Typography>
-    </>
+
+      <Box display="flex" className={`${classes.profBox}`} alignItems="center">
+        <Box display="inline-block">
+          <img
+            className={`${classes.profIcon}`}
+            src="/static/img/reactjs-logo.png"
+            title="React.js"
+            alt="React.js logo"
+          />
+        </Box>
+        <Box display="inline-block">
+          <Typography variant="body1">
+            <Link href="/" color="inherit">
+              React.js (3+ yrs)
+            </Link>
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box display="flex" className={`${classes.profBox}`} alignItems="center">
+        <Box display="inline-block">
+          <img
+            className={`${classes.profIcon}`}
+            src="/static/img/nextjs-logo.png"
+            title="Next.js"
+            alt="Next.js logo"
+          />
+        </Box>
+        <Box display="inline-block">
+          <Typography variant="body1">
+            <Link href="/" color="inherit">
+              Next.js
+            </Link>
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box display="flex" className={`${classes.profBox}`} alignItems="center">
+        <Box display="inline-block">
+          <img
+            className={`${classes.profIcon}`}
+            src="/static/img/typescript-logo.png"
+            title="Typescript"
+            alt="Typescript logo"
+          />
+        </Box>
+        <Box display="inline-block">
+          <Typography variant="body1">
+            <Link href="/" color="inherit">
+              Typescript
+            </Link>
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box display="flex" className={`${classes.profBox}`} alignItems="center">
+        <Box display="inline-block">
+          <img
+            className={`${classes.profIcon}`}
+            src="/static/img/materialui-logo.png"
+            title="Material-UI"
+            alt="Material-UI logo"
+          />
+        </Box>
+        <Box display="inline-block">
+          <Typography variant="body1">
+            <Link href="/" color="inherit">
+              Material-UI
+            </Link>
+          </Typography>
+        </Box>
+      </Box>
+    </Box>
   );
 };
-
-export interface IHomeProfileProps {}
 
 export default HomeProfile;

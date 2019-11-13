@@ -27,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'none',
     border: 0,
   },
+  bgAlpha: {
+    backgroundColor: '#fafafa',
+    opacity: 0.94,
+  },
   ...globals,
 }));
 
@@ -38,7 +42,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
   const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 
   return (
-    <div className={`${classes.root} bg-fixed bg-wa`}>
+    <div className={`${classes.root} bg-fixed ${classes.bgAlpha}`}>
       <Grid container className={`${classes.container}`} justify="center" alignItems="center">
         <Grid container item xs={12} sm={11} md={10} lg={9} justify="flex-start">
           <Grid xs={12} item>
@@ -67,7 +71,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
             <Box p={2}>
               <ButtonGroup fullWidth>
                 <Button size="large" onClick={() => setMenu(0)} className={classes.button}>
-                  <Typography className={`${classes.crsPointer}`} variant="h6" component="h3">
+                  <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
                     <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {'<'}
                     </span>
@@ -80,7 +84,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
               </ButtonGroup>
               <ButtonGroup fullWidth>
                 <Button size="large" onClick={() => setMenu(1)} className={classes.button}>
-                  <Typography className={`${classes.crsPointer}`} variant="h6" component="h3">
+                  <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
                     <span className={menu === 1 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {'<'}
                     </span>
@@ -93,7 +97,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
               </ButtonGroup>
               <ButtonGroup fullWidth>
                 <Button size="large" onClick={() => setMenu(2)} className={`${classes.button}`}>
-                  <Typography className={`${classes.crsPointer}`} variant="h6" component="h3">
+                  <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
                     <span className={menu === 2 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {'<'}
                     </span>

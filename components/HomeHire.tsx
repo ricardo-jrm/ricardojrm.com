@@ -2,7 +2,7 @@ import React from 'react';
 
 import Typography from '@material-ui/core/Typography';
 
-const HomeHire = ({  }: IHomeHireProps): any => {
+const HomeHire = (): any => {
   return (
     <>
       <Typography variant="body1">
@@ -14,7 +14,5 @@ const HomeHire = ({  }: IHomeHireProps): any => {
     </>
   );
 };
-
-export interface IHomeHireProps {}
 
 export default HomeHire;
