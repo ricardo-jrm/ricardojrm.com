@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Radiance';
+  font-style: 'normal';
+  /* font-display: 'swap'; */
+  font-weight: normal;
+  src: local('Radiance'), local('Radiance-Regular'),
+    url('/static/fonts/Radiance-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Radiance-Bold';
+  font-style: 'normal';
+  /* font-display: 'swap'; */
+  font-weight: bold;
+  src: local('Radiance-Bold'), url('/static/fonts/Radiance-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Radiance-Black';
+  font-style: 'normal';
+  /* font-display: 'swap'; */
+  font-weight: bolder;
+  src: local('Radiance-Black'), url('/static/fonts/Radiance-Black.woff') format('woff');
+}
+@font-face {
+  font-family: 'Radiance-Distressed';
+  font-style: 'normal';
+  /* font-display: 'swap'; */
+  font-weight: bolder;
+  src: local('Radiance-Distressed-Black'),
+    url('/static/fonts/Radiance-Distressed-Black.woff2') format('woff2');
+}
