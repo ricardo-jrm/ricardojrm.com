@@ -7,3 +7,22 @@
   background: rgba(101, 219, 154, 0.99) !important;
   color: rgba(32, 32, 32, 1) !important;
 }
+
+.transitions {
+  transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease !important;
+}
+
+.bg-fixed {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: 0 0;
+}
+
+.bg-wa {
+  background-image: url('/static/img/bg-wa.png');
+}
+
+.Homepage {
+  background-image: url('/static/img/light_nrg.gif');
+}
