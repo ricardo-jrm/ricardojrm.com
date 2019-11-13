@@ -32,7 +32,7 @@ const HomeXP = (): any => {
   return (
     <Box>
       <Box pb={1.2}>
-        <Typography variant="h6">2017-2019</Typography>
+        <Typography variant="h6">2017-2019: Glaiveware</Typography>
         <Box display="flex" alignItems="center">
           <Box display="inline-block">
             <img
@@ -44,13 +44,13 @@ const HomeXP = (): any => {
           </Box>
           <Box display="inline-block">
             <Typography variant="body1">
-              Glaiveware - Full Stack Developer, Project Manager, Business owner & Co-Founder
+              Full Stack Developer, Project Manager, Business owner & Co-Founder
             </Typography>
           </Box>
         </Box>
       </Box>
       <Box pb={1.2}>
-        <Typography variant="h6">2016</Typography>
+        <Typography variant="h6">2016: Sycret.ink</Typography>
         <Box display="flex" alignItems="center">
           <Box display="inline-block">
             <img
@@ -62,13 +62,13 @@ const HomeXP = (): any => {
           </Box>
           <Box display="inline-block">
             <Typography variant="body1">
-              Sycret.ink - Mobile Developer - React Native + libsignal-protocol
+              Mobile Developer: React Native + libsignal-protocol
             </Typography>
           </Box>
         </Box>
       </Box>
       <Box pb={1.2}>
-        <Typography variant="h6">2015</Typography>
+        <Typography variant="h6">2015: NextBitt</Typography>
         <Box display="flex" alignItems="center">
           <Box display="inline-block">
             <img
@@ -79,12 +79,12 @@ const HomeXP = (): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography variant="body1">NextBitt - Frontend Developer - Javascript + C#</Typography>
+            <Typography variant="body1">Frontend Developer: Javascript + C#</Typography>
           </Box>
         </Box>
       </Box>
       <Box pb={1.2}>
-        <Typography variant="h6">2014</Typography>
+        <Typography variant="h6">2014: Science4you</Typography>
         <Box display="flex" alignItems="center">
           <Box display="inline-block">
             <img
@@ -95,7 +95,7 @@ const HomeXP = (): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography variant="body1">Science4you - Backend Developer - Java + MySQL</Typography>
+            <Typography variant="body1">Backend Developer: Java + MySQL</Typography>
           </Box>
         </Box>
       </Box>
