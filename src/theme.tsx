@@ -55,7 +55,6 @@ const appTheme = /* resposiveFontSizes( */ createMuiTheme({
         fontWeight: 600,
       },
       h6: {
-        fontFamily: ['Radiance'].join(','),
         fontWeight: 600,
       },
       body1: {
