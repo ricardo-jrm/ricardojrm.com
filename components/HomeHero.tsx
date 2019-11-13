@@ -10,7 +10,10 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 
 import { globals } from 'src/theme';
-// import Button from '@material-ui/core/Button';
+
+import HomeAbout from 'components/HomeAbout';
+import HomeProfile from 'components/HomeProfile';
+import HomeHire from 'components/HomeHire';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,12 +66,12 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
           <Grid xs={12} md={3} lg={4} item>
             <Box p={2}>
               <ButtonGroup fullWidth>
-                <Button size="large" onClick={() => setMenu(0)} className={`${classes.button}`}>
+                <Button size="large" onClick={() => setMenu(0)} className={classes.button}>
                   <Typography className={`${classes.crsPointer}`} variant="h6" component="h3">
                     <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {'<'}
                     </span>
-                    {menu === 0 ? 'ForHire' : 'For Hire'}
+                    About
                     <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {' />'}
                     </span>
@@ -89,12 +92,12 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 </Button>
               </ButtonGroup>
               <ButtonGroup fullWidth>
-                <Button size="large" onClick={() => setMenu(2)} className={classes.button}>
+                <Button size="large" onClick={() => setMenu(2)} className={`${classes.button}`}>
                   <Typography className={`${classes.crsPointer}`} variant="h6" component="h3">
                     <span className={menu === 2 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {'<'}
                     </span>
-                    About
+                    {menu === 2 ? 'ForHire' : 'For Hire'}
                     <span className={menu === 2 ? `transitions` : `transitions ${classes.vHidden}`}>
                       {' />'}
                     </span>
@@ -123,36 +126,13 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
           <Grid xs={12} md={9} lg={8} item>
             <Box p={2}>
               <Box display={menu === 0 ? 'block' : 'none'} className="animated fadeIn">
-                <Typography variant="body1">
-                  - Remote Job
-                  <br />
-                  - Freelance Work
-                  <br />- Consulting
-                </Typography>
+                <HomeAbout />
               </Box>
               <Box display={menu === 1 ? 'block' : 'none'} className="animated fadeIn">
-                <Typography variant="body1">
-                  - Senior Front End Developer
-                  <br />
-                  - Full Remote
-                  <br />
-                  Effective Stack:
-                  <br />
-                  {'  - React.js (3+ yrs)'}
-                  <br />
-                  {'  - Next.js'}
-                  <br />
-                  {'  - Typescript'}
-                  <br />
-                  {'  - Material-UI'}
-                </Typography>
+                <HomeProfile />
               </Box>
               <Box display={menu === 2 ? 'block' : 'none'} className="animated fadeIn">
-                <Typography variant="body1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore numquam nostrum
-                  repudiandae unde similique! Beatae eveniet distinctio accusantium maxime eius ipsa
-                  qui deleniti, iste aperiam officia, eligendi autem. Deserunt, adipisci.
-                </Typography>
+                <HomeHire />
               </Box>
             </Box>
           </Grid>
