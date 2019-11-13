@@ -28,6 +28,11 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
           <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+          />
+
+          <link
             href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
             integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
             crossOrigin="anonymous"

@@ -2,22 +2,27 @@ import React, { useState } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+import Button from '@material-ui/core/Button';
 
 import { globals } from 'src/theme';
 // import Button from '@material-ui/core/Button';
 
-const useStyles = makeStyles((/* theme */) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   container: {
     height: '100vh',
   },
-  wrapMenu: {
-    height: '200px',
+  button: {
+    margin: theme.spacing(0.5),
+    textTransform: 'none',
+    border: 0,
   },
   ...globals,
 }));
@@ -27,19 +32,21 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
 
   const [menu, setMenu] = useState(0);
 
+  const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
+
   return (
-    <div className={classes.root}>
+    <div className={`${classes.root} bg-fixed bg-wa`}>
       <Grid container className={`${classes.container}`} justify="center" alignItems="center">
         <Grid container item xs={12} sm={11} md={10} lg={9} justify="flex-start">
           <Grid xs={12} item>
             <Box display="inline-block" fontWeight={700}>
-              <Typography className={`${classes.fwBold}`} variant="h1">
+              <Typography className={`${classes.fwBold} ${classes.title} transitions`} variant="h1">
                 RicardoJRM
               </Typography>
             </Box>
             <Box ml={2} display="inline-block">
               <img
-                className={`${classes.imgR} ${classes.imgLogo}`}
+                className={`${classes.imgR} ${classes.imgLogo} transitions`}
                 src="/static/img/ricardojrm-logo.png"
                 title=""
                 alt=""
@@ -49,41 +56,63 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
           <Grid xs={12} item>
             <Box>
               <Typography className={`${classes.fwBold}`} variant="h4" component="h2">
-                {'<React Developer />'}
+                {'React Developer'}
               </Typography>
             </Box>
           </Grid>
-          <Grid xs={3} onClick={() => setMenu(0)} item>
-            <Box textAlign="center">
-              <Typography
-                className={`${classes.fwSemiBold} ${classes.crsPointer}`}
-                variant="h6"
-                component="h3">
-                For Hire:
-              </Typography>
+          <Grid xs={12} md={3} lg={4} item>
+            <Box my={1}>
+              <ButtonGroup fullWidth>
+                <Button size="large" onClick={() => setMenu(0)} className={`${classes.button}`}>
+                  <Typography
+                    className={`${classes.fwSemiBold} ${classes.crsPointer}`}
+                    variant="h6"
+                    component="h3">
+                    <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {'<'}
+                    </span>
+                    ForHire
+                    <span className={menu === 0 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {' />'}
+                    </span>
+                  </Typography>
+                </Button>
+              </ButtonGroup>
+              <ButtonGroup fullWidth>
+                <Button size="large" onClick={() => setMenu(1)} className={classes.button}>
+                  <Typography
+                    className={`${classes.fwSemiBold} ${classes.crsPointer}`}
+                    variant="h6"
+                    component="h3">
+                    <span className={menu === 1 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {'<'}
+                    </span>
+                    Profile
+                    <span className={menu === 1 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {' />'}
+                    </span>
+                  </Typography>
+                </Button>
+              </ButtonGroup>
+              <ButtonGroup fullWidth>
+                <Button size="large" onClick={() => setMenu(2)} className={classes.button}>
+                  <Typography
+                    className={`${classes.fwSemiBold} ${classes.crsPointer}`}
+                    variant="h6"
+                    component="h3">
+                    <span className={menu === 2 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {'<'}
+                    </span>
+                    About
+                    <span className={menu === 2 ? `transitions` : `transitions ${classes.vHidden}`}>
+                      {' />'}
+                    </span>
+                  </Typography>
+                </Button>
+              </ButtonGroup>
             </Box>
           </Grid>
-          <Grid xs={3} onClick={() => setMenu(1)} item>
-            <Box textAlign="center">
-              <Typography
-                className={`${classes.fwSemiBold} ${classes.crsPointer}`}
-                variant="h6"
-                component="h3">
-                Profile:
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid xs={3} onClick={() => setMenu(2)} item>
-            <Box textAlign="center">
-              <Typography
-                className={`${classes.fwSemiBold} ${classes.crsPointer}`}
-                variant="h6"
-                component="h3">
-                About:
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid className={`${classes.wrapMenu}`} xs={12} item>
+          <Grid xs={12} md={9} lg={8} item>
             <Box display={menu === 0 ? 'block' : 'none'}>
               <Typography variant="body1">
                 - Remote Job
@@ -115,6 +144,19 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 repudiandae unde similique! Beatae eveniet distinctio accusantium maxime eius ipsa
                 qui deleniti, iste aperiam officia, eligendi autem. Deserunt, adipisci.
               </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12}>
+            <Box>
+              <Link href="/" color="inherit" onClick={preventDefault}>
+                <i className="fas fa-at fa-4x" />
+              </Link>
+              <Link href="/" color="inherit" onClick={preventDefault}>
+                <i className="fab fa-linkedin fa-4x" />
+              </Link>
+              <Link href="/" color="inherit" onClick={preventDefault}>
+                <i className="fab fa-github fa-4x" />
+              </Link>
             </Box>
           </Grid>
         </Grid>

@@ -10,6 +10,9 @@ const appTheme = /* resposiveFontSizes( */ createMuiTheme({
       error: red,
       contrastThreshold: 3,
       tonalOffset: 0.2,
+      background: {
+        default: '#fafafa',
+      },
     },
     typography: {
       fontFamily: [
@@ -28,11 +31,8 @@ const appTheme = /* resposiveFontSizes( */ createMuiTheme({
   }) /* ) */;
 
 const globals = {
-  dNone: {
-    display: 'none',
-  },
-  dInBlock: {
-    display: 'inline-block',
+  vHidden: {
+    opacity: 0,
   },
   imgR: {
     userSelect: 'none' as
@@ -52,9 +52,6 @@ const globals = {
     maxWidth: '100%',
     height: 'auto',
   },
-  imgLogo: {
-    maxHeight: appTheme.typography.h1.fontSize,
-  },
   crsPointer: {
     cursor: 'pointer',
   },
@@ -63,6 +60,21 @@ const globals = {
   },
   fwSemiBold: {
     fontWeight: 600,
+  },
+
+  // testing
+
+  imgLogo: {
+    maxHeight: appTheme.typography.h1.fontSize,
+    '&:hover': {
+      opacity: 0,
+    },
+  },
+  title: {
+    '&:hover': {
+      color: 'red',
+      backgroundColor: 'blue',
+    },
   },
 };
 
