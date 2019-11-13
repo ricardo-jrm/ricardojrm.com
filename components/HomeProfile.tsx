@@ -6,8 +6,6 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
-// import { globals } from 'src/theme';
-
 const useStyles = makeStyles((theme) => ({
   profIcon: {
     width: '35px',
