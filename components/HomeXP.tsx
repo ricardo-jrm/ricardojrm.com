@@ -44,7 +44,7 @@ const HomeXP = (): any => {
           </Box>
           <Box display="inline-block">
             <Typography variant="body1">
-              Glaiveware - React Developer, Project Manager, Business owner & Co-Founder
+              Glaiveware - Full Stack Developer, Project Manager, Business owner & Co-Founder
             </Typography>
           </Box>
         </Box>
@@ -62,7 +62,7 @@ const HomeXP = (): any => {
           </Box>
           <Box display="inline-block">
             <Typography variant="body1">
-              Sycret.ink - Mobile React Native + libsignal-protocol Developer
+              Sycret.ink - Mobile Developer - React Native + libsignal-protocol
             </Typography>
           </Box>
         </Box>
@@ -79,7 +79,7 @@ const HomeXP = (): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography variant="body1">NextBitt - Frontend Javascript Developer</Typography>
+            <Typography variant="body1">NextBitt - Frontend Developer - Javascript + C#</Typography>
           </Box>
         </Box>
       </Box>
@@ -95,7 +95,7 @@ const HomeXP = (): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography variant="body1">Science4you - Backend Java + MySQL Developer</Typography>
+            <Typography variant="body1">Science4you - Backend Developer - Java + MySQL</Typography>
           </Box>
         </Box>
       </Box>

@@ -37,7 +37,7 @@ const HomeProfile = (): any => {
   return (
     <Box alignItems="center">
       <Typography variant="h6">
-        Senior Front End Developer near Lisbon, Portugal with an effective stack of:
+        Senior Frontend Developer near Lisbon, Portugal with an effective stack of:
       </Typography>
 
       <Box display="flex" className={`${classes.profBox}`} alignItems="center">
@@ -52,7 +52,7 @@ const HomeProfile = (): any => {
         <Box display="inline-block">
           <Typography variant="body1">
             <Link href="/" color="inherit">
-              React.js (3+ yrs)
+              React.js (3+ years)
             </Link>
           </Typography>
         </Box>
