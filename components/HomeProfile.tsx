@@ -36,7 +36,7 @@ const HomeProfile = (): any => {
 
   return (
     <Box alignItems="center">
-      <Typography variant="h6">
+      <Typography color="textPrimary" variant="h6">
         Senior Frontend Developer near Lisbon, Portugal with an effective stack of:
       </Typography>
 
@@ -50,7 +50,7 @@ const HomeProfile = (): any => {
           />
         </Box>
         <Box display="inline-block">
-          <Typography variant="body1">
+          <Typography color="textPrimary" variant="body1">
             <Link href="/" color="inherit">
               React.js (3+ years)
             </Link>
@@ -68,7 +68,7 @@ const HomeProfile = (): any => {
           />
         </Box>
         <Box display="inline-block">
-          <Typography variant="body1">
+          <Typography color="textPrimary" variant="body1">
             <Link href="/" color="inherit">
               Next.js
             </Link>
@@ -86,7 +86,7 @@ const HomeProfile = (): any => {
           />
         </Box>
         <Box display="inline-block">
-          <Typography variant="body1">
+          <Typography color="textPrimary" variant="body1">
             <Link href="/" color="inherit">
               Typescript
             </Link>
@@ -104,7 +104,7 @@ const HomeProfile = (): any => {
           />
         </Box>
         <Box display="inline-block">
-          <Typography variant="body1">
+          <Typography color="textPrimary" variant="body1">
             <Link href="/" color="inherit">
               Material-UI
             </Link>

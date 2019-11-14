@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   skillIcon: {
-    width: '35px',
+    width: '30px',
     height: 'auto',
     marginRight: theme.spacing(1.2),
     userSelect: 'none' as
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       | undefined,
   },
   skillBox: {
-    height: '50px',
+    height: '45px',
   },
 }));
 
@@ -77,7 +77,9 @@ const HomeSkills = (): any => {
                   />
                 </Box>
                 <Box display="inline-block">
-                  <Typography variant="body1">{skill[0]}</Typography>
+                  <Typography color="textPrimary" variant="body1">
+                    {skill[0]}
+                  </Typography>
                 </Box>
               </Box>
             </Grid>

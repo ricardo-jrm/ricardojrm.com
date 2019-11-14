@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   xpImg: {
-    width: '100px',
+    width: '75px',
     height: 'auto',
     marginRight: theme.spacing(1.2),
     userSelect: 'none' as
@@ -32,7 +32,9 @@ const HomeXP = (): any => {
   return (
     <Box>
       <Box pb={1.2}>
-        <Typography variant="h6">2017-2019: Glaiveware</Typography>
+        <Typography color="textPrimary" variant="h6">
+          2017-2019: Glaiveware
+        </Typography>
         <Box display="flex" alignItems="center">
           <Box display="inline-block">
             <img
@@ -43,14 +45,16 @@ const HomeXP = (): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography variant="body1">
+            <Typography color="textPrimary" variant="body1">
               Full Stack Developer, Project Manager, Business owner & Co-Founder
             </Typography>
           </Box>
         </Box>
       </Box>
       <Box pb={1.2}>
-        <Typography variant="h6">2016: Sycret.ink</Typography>
+        <Typography color="textPrimary" variant="h6">
+          2016: Sycret.ink
+        </Typography>
         <Box display="flex" alignItems="center">
           <Box display="inline-block">
             <img
@@ -61,14 +65,16 @@ const HomeXP = (): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography variant="body1">
+            <Typography color="textPrimary" variant="body1">
               Mobile Developer: React Native + libsignal-protocol
             </Typography>
           </Box>
         </Box>
       </Box>
       <Box pb={1.2}>
-        <Typography variant="h6">2015: NextBitt</Typography>
+        <Typography color="textPrimary" variant="h6">
+          2015: NextBitt
+        </Typography>
         <Box display="flex" alignItems="center">
           <Box display="inline-block">
             <img
@@ -79,12 +85,16 @@ const HomeXP = (): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography variant="body1">Frontend Developer: Javascript + C#</Typography>
+            <Typography color="textPrimary" variant="body1">
+              Frontend Developer: Javascript + C#
+            </Typography>
           </Box>
         </Box>
       </Box>
       <Box pb={1.2}>
-        <Typography variant="h6">2014: Science4you</Typography>
+        <Typography color="textPrimary" variant="h6">
+          2014: Science4you
+        </Typography>
         <Box display="flex" alignItems="center">
           <Box display="inline-block">
             <img
@@ -95,7 +105,9 @@ const HomeXP = (): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography variant="body1">Backend Developer: Java + MySQL</Typography>
+            <Typography color="textPrimary" variant="body1">
+              Backend Developer: Java + MySQL
+            </Typography>
           </Box>
         </Box>
       </Box>
