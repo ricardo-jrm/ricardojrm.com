@@ -44,7 +44,7 @@ const typography = {
   },
   body1: {
     fontWeight: 500,
-    // fontSize: '1.1rem',
+    fontSize: '1.1rem',
   },
 };
 
@@ -69,25 +69,22 @@ const appTheme = /* resposiveFontSizes( */ createMuiTheme({
 
 const mechaTheme = createMuiTheme({
   palette: {
-    // type: 'dark',
+    type: 'dark',
     primary: {
-      main: '#2a293b',
+      main: '#807CAE',
+      light: '#b3b0cf',
+      dark: '#2A293B',
     },
     secondary: {
       main: '#d54d8f',
+      // light: the one generated is cool,
+      dark: '#8c4573', // this one not so cool
     },
     error: {
       main: '#a22334',
     },
     contrastThreshold: 3,
     tonalOffset: 0.2,
-    // background: {
-    //   default: '#2a293b',
-    // },
-    // text: {
-    //   primary: '#fff',
-    //   secondary: '#d54d8f',
-    // },
   },
   typography: { ...typography },
 });

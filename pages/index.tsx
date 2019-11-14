@@ -6,7 +6,7 @@ import HomeHero from 'components/HomeHero';
 
 const Homepage = () => {
   return (
-    <div className="animated fadeIn bg-fixed Homepage" id="Homepage">
+    <div className="animated fadeIn" id="Homepage">
       <PageMeta />
       <HomeHero />
     </div>
