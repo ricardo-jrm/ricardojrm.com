@@ -12,7 +12,7 @@ const HomeHire = (): any => {
         </Typography>
         <Typography color="textPrimary" variant="body1">
           I&lsquo;ve recently started looking for a full-time remote position as a frontend
-          developer that matches my profile and can give me challenging / intersting projects.
+          developer that matches my profile and can give me challenging / interesting projects.
         </Typography>
       </Box>
       <Box pt={1.2}>
