@@ -12,7 +12,7 @@ import Link from '@material-ui/core/Link';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 
-import SimplePopover from 'components/SimplePopover';
+import ThemePopover from 'components/ThemePopover';
 import HomeAbout from 'components/HomeAbout';
 import HomeProfile from 'components/HomeProfile';
 import HomeHire from 'components/HomeHire';
@@ -248,10 +248,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                   </Box>
                 </Box>
                 <Box textAlign="center" mt={2}>
-                  <Typography color="textPrimary" variant="body1">
-                    (( THEMES ))
-                  </Typography>
-                  <SimplePopover />
+                  <ThemePopover hook={setActiveTheme} />
                 </Box>
               </Grid>
               <Grid xs={12} md={9} lg={8} item>
