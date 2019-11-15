@@ -3,6 +3,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -16,7 +17,7 @@ const useStyles = makeStyles(() => {
   };
 });
 
-const ThemePopover = ({ hook }: IThemePopoverProps): any => {
+const ThemePopover = ({ hook, array }: IThemePopoverProps): any => {
   console.log(hook);
 
   const classes = useStyles();
@@ -64,16 +65,104 @@ const ThemePopover = ({ hook }: IThemePopoverProps): any => {
             <Typography color="textPrimary" variant="h6">
               Themes:
             </Typography>
-            <Typography color="textPrimary" variant="body1">
-              The content of the Popover.
-            </Typography>
+            {array.map((
+              theme: any, //  onClick={hook(theme[1])}
+            ) => (
+              <Box>
+                <Button style={{ width: '100%' }}>
+                  <Box display="flex" alignItems="center" style={{ width: '100%' }} py={0.75}>
+                    <Box display="flex-start" textAlign="start" flexGrow={1} pr={5}>
+                      <Typography color="textPrimary" variant="body1">
+                        {theme[0]}
+                      </Typography>
+                    </Box>
+                    <Box>
+                      <Grid container style={{ minWidth: '175px' }}>
+                        <Grid
+                          item
+                          xs={4}
+                          style={{
+                            backgroundColor: theme[1].palette.primary.dark,
+                            height: '20px',
+                          }}>
+                          {' '}
+                        </Grid>
+                        <Grid
+                          item
+                          xs={4}
+                          style={{
+                            backgroundColor: theme[1].palette.primary.main,
+                            height: '20px',
+                          }}>
+                          {' '}
+                        </Grid>
+                        <Grid
+                          item
+                          xs={4}
+                          style={{
+                            backgroundColor: theme[1].palette.primary.light,
+                            height: '20px',
+                          }}>
+                          {' '}
+                        </Grid>
+                        <Grid
+                          item
+                          xs={4}
+                          style={{
+                            backgroundColor: theme[1].palette.secondary.dark,
+                            height: '20px',
+                          }}>
+                          {' '}
+                        </Grid>
+                        <Grid
+                          item
+                          xs={4}
+                          style={{
+                            backgroundColor: theme[1].palette.secondary.main,
+                            height: '20px',
+                          }}>
+                          {' '}
+                        </Grid>
+                        <Grid
+                          item
+                          xs={4}
+                          style={{
+                            backgroundColor: theme[1].palette.secondary.light,
+                            height: '20px',
+                          }}>
+                          {' '}
+                        </Grid>
+                        <Grid
+                          item
+                          xs={4}
+                          style={{ backgroundColor: theme[1].palette.error.dark, height: '20px' }}>
+                          {' '}
+                        </Grid>
+                        <Grid
+                          item
+                          xs={4}
+                          style={{ backgroundColor: theme[1].palette.error.main, height: '20px' }}>
+                          {' '}
+                        </Grid>
+                        <Grid
+                          item
+                          xs={4}
+                          style={{ backgroundColor: theme[1].palette.error.light, height: '20px' }}>
+                          {' '}
+                        </Grid>
+                      </Grid>
+                    </Box>
+                  </Box>
+                </Button>
+              </Box>
+            ))}
           </Box>
           <Box>
             <Typography color="textPrimary" variant="h6">
               Mode:
             </Typography>
             <Typography color="textPrimary" variant="body1">
-              The content of the Popover.
+              {'Dark <-> Light'}
             </Typography>
           </Box>
         </Box>
@@ -84,6 +173,7 @@ const ThemePopover = ({ hook }: IThemePopoverProps): any => {
 
 export interface IThemePopoverProps {
   hook: any;
+  array: any;
 }
 
 export default ThemePopover;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { ThemeProvider, useTheme, makeStyles } from '@material-ui/core/styles';
-import { mechaTheme, globals } from 'src/theme';
+import { bwsepia, gold, mecha, boom, neo, liquid, exotic, globals } from 'src/theme';
 
 import { hexToRGB } from 'utils/colors';
 
@@ -19,7 +19,17 @@ import HomeHire from 'components/HomeHire';
 import HomeXP from 'components/HomeXP';
 import HomeSkills from 'components/HomeSkills';
 
-let theme = mechaTheme;
+const myThemes = [
+  ['Black and White', bwsepia],
+  ["Fool's Gold", gold],
+  ['Mecha', mecha],
+  ['Boom', boom],
+  ['Neo Tokyo', neo],
+  ['liquid', liquid],
+  ['pineapple', exotic],
+];
+
+let theme = bwsepia;
 
 const useStyles = makeStyles(() => {
   const bgRGB = hexToRGB(theme.palette.primary[theme.palette.type || 'main']);
@@ -248,7 +258,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                   </Box>
                 </Box>
                 <Box textAlign="center" mt={2}>
-                  <ThemePopover hook={setActiveTheme} />
+                  <ThemePopover hook={setActiveTheme} array={myThemes} />
                 </Box>
               </Grid>
               <Grid xs={12} md={9} lg={8} item>
