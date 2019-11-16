@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
@@ -19,17 +19,16 @@ const useStyles = makeStyles(() => {
 });
 
 const useDarkMode = (theme: any, setTheme: any) => {
-  const {
-    palette: { type },
-  } = theme;
+  const type = window.localStorage.getItem('DARK_MODE') === 'light' ? 'dark' : 'light';
   const newTheme = {
     ...theme,
     palette: {
       ...theme.palette,
-      type: type === 'light' ? 'dark' : 'light',
+      type,
     },
   };
   setTheme(newTheme);
+  window.localStorage.setItem('DARK_MODE', type);
 };
 
 const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any => {
@@ -38,8 +37,16 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
     useDarkMode(themeHook.activeTheme, themeHook.setActiveTheme);
   };
 
-  const handleTheme = (newTheme: any) => {
+  const handleTheme = (theme: any) => {
+    const newTheme = {
+      ...theme[1],
+      palette: {
+        ...theme[1].palette,
+        type: window.localStorage.getItem('DARK_MODE') === 'light' ? 'light' : 'dark',
+      },
+    };
     themeHook.setActiveTheme(newTheme);
+    window.localStorage.setItem('THEME', theme[0]);
   };
 
   const classes = useStyles();
@@ -87,100 +94,110 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
             <Typography color="textPrimary" variant="h6">
               Themes:
             </Typography>
-            {array.map((
-              theme: any, // onClick={themeHook.setActiveTheme(theme[1])}
-            ) => (
-              <Box key={theme[0]}>
-                <Button
-                  type="button"
-                  style={{ width: '100%' }}
-                  onClick={() => handleTheme(theme[1])}>
-                  <Box display="flex" alignItems="center" style={{ width: '100%' }} py={0.75}>
-                    <Box display="flex-start" textAlign="start" flexGrow={1} pr={5}>
-                      <Typography color="textPrimary" variant="body1">
-                        {theme[0]}
-                      </Typography>
+            {array.map((theme: any) => {
+              const themeConfig = createMuiTheme(theme[1]);
+              return (
+                <Box key={theme[0]}>
+                  <Button
+                    type="button"
+                    style={{ width: '100%' }}
+                    onClick={() => handleTheme(theme)}>
+                    <Box display="flex" alignItems="center" style={{ width: '100%' }} py={0.75}>
+                      <Box display="flex-start" textAlign="start" flexGrow={1} pr={5}>
+                        <Typography color="textPrimary" variant="body1">
+                          {theme[0]}
+                        </Typography>
+                      </Box>
+                      <Box>
+                        <Grid container style={{ minWidth: '175px' }}>
+                          <Grid
+                            item
+                            xs={4}
+                            style={{
+                              backgroundColor: themeConfig.palette.primary.dark,
+                              height: '20px',
+                            }}>
+                            {' '}
+                          </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                            style={{
+                              backgroundColor: themeConfig.palette.primary.main,
+                              height: '20px',
+                            }}>
+                            {' '}
+                          </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                            style={{
+                              backgroundColor: themeConfig.palette.primary.light,
+                              height: '20px',
+                            }}>
+                            {' '}
+                          </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                            style={{
+                              backgroundColor: themeConfig.palette.secondary.dark,
+                              height: '20px',
+                            }}>
+                            {' '}
+                          </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                            style={{
+                              backgroundColor: themeConfig.palette.secondary.main,
+                              height: '20px',
+                            }}>
+                            {' '}
+                          </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                            style={{
+                              backgroundColor: themeConfig.palette.secondary.light,
+                              height: '20px',
+                            }}>
+                            {' '}
+                          </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                            style={{
+                              backgroundColor: themeConfig.palette.error.dark,
+                              height: '20px',
+                            }}>
+                            {' '}
+                          </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                            style={{
+                              backgroundColor: themeConfig.palette.error.main,
+                              height: '20px',
+                            }}>
+                            {' '}
+                          </Grid>
+                          <Grid
+                            item
+                            xs={4}
+                            style={{
+                              backgroundColor: themeConfig.palette.error.light,
+                              height: '20px',
+                            }}>
+                            {' '}
+                          </Grid>
+                        </Grid>
+                      </Box>
                     </Box>
-                    <Box>
-                      <Grid container style={{ minWidth: '175px' }}>
-                        <Grid
-                          item
-                          xs={4}
-                          style={{
-                            backgroundColor: theme[1].palette.primary.dark,
-                            height: '20px',
-                          }}>
-                          {' '}
-                        </Grid>
-                        <Grid
-                          item
-                          xs={4}
-                          style={{
-                            backgroundColor: theme[1].palette.primary.main,
-                            height: '20px',
-                          }}>
-                          {' '}
-                        </Grid>
-                        <Grid
-                          item
-                          xs={4}
-                          style={{
-                            backgroundColor: theme[1].palette.primary.light,
-                            height: '20px',
-                          }}>
-                          {' '}
-                        </Grid>
-                        <Grid
-                          item
-                          xs={4}
-                          style={{
-                            backgroundColor: theme[1].palette.secondary.dark,
-                            height: '20px',
-                          }}>
-                          {' '}
-                        </Grid>
-                        <Grid
-                          item
-                          xs={4}
-                          style={{
-                            backgroundColor: theme[1].palette.secondary.main,
-                            height: '20px',
-                          }}>
-                          {' '}
-                        </Grid>
-                        <Grid
-                          item
-                          xs={4}
-                          style={{
-                            backgroundColor: theme[1].palette.secondary.light,
-                            height: '20px',
-                          }}>
-                          {' '}
-                        </Grid>
-                        <Grid
-                          item
-                          xs={4}
-                          style={{ backgroundColor: theme[1].palette.error.dark, height: '20px' }}>
-                          {' '}
-                        </Grid>
-                        <Grid
-                          item
-                          xs={4}
-                          style={{ backgroundColor: theme[1].palette.error.main, height: '20px' }}>
-                          {' '}
-                        </Grid>
-                        <Grid
-                          item
-                          xs={4}
-                          style={{ backgroundColor: theme[1].palette.error.light, height: '20px' }}>
-                          {' '}
-                        </Grid>
-                      </Grid>
-                    </Box>
-                  </Box>
-                </Button>
-              </Box>
-            ))}
+                  </Button>
+                </Box>
+              );
+            })}
           </Box>
           <Box>
             <Typography color="textPrimary" variant="h6">

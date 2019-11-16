@@ -47,7 +47,8 @@
     // fix after quick fix
     "@typescript-eslint/no-non-null-assertion": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
-    "no-unused-expressions": "warn"
+    "no-unused-expressions": "warn",
+    "prefer-destructuring": "warn"
     // quick fix for legacy components
     // "jsx-a11y/click-events-have-key-events": 0,
     // "jsx-a11y/no-noninteractive-element-interactions": 0,

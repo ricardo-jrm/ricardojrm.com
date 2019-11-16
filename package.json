@@ -2,6 +2,15 @@
   "name": "ricardojrm.com",
   "version": "1.0.0",
   "description": "ricardojrm.com",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "globals": {
+      "window": true
+    }
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",

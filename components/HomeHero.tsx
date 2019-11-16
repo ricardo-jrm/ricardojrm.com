@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { ThemeProvider, createMuiTheme, useTheme, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
 import { bwsepia, gold, mecha, boom, neo, liquid, exotic, globals } from 'src/theme';
 
 import { hexToRGB } from 'utils/colors';
@@ -20,24 +20,49 @@ import HomeXP from 'components/HomeXP';
 import HomeSkills from 'components/HomeSkills';
 
 const myThemes = [
-  ['Black and White', createMuiTheme(bwsepia)],
-  ["Fool's Gold", createMuiTheme(gold)],
-  ['Mecha', createMuiTheme(mecha)],
-  ['Boom', createMuiTheme(boom)],
-  ['Neo Tokyo', createMuiTheme(neo)],
-  ['liquid', createMuiTheme(liquid)],
-  ['pineapple', createMuiTheme(exotic)],
+  ['Black and White', bwsepia],
+  ["Fool's Gold", gold],
+  ['Mecha', mecha],
+  ['Boom', boom],
+  ['Neo Tokyo', neo],
+  ['liquid', liquid],
+  ['watermelon', exotic],
 ];
 
 const HomeHero = ({  }: IHomeHeroProps): any => {
   const [menu, setMenu] = useState(1);
 
+  let localDark = 'dark';
+  let localTheme = 'Black and White';
+  let tempTheme: any = bwsepia;
+  if (process.browser) {
+    localDark = window.localStorage.getItem('DARK_MODE') || 'dark';
+    localTheme = window.localStorage.getItem('THEME') || 'Black and White';
+    for (let index = 0; index < myThemes.length; index++) {
+      const theme = myThemes[index];
+      if (localTheme === theme[0] && localTheme !== 'Black and White') {
+        [, tempTheme] = theme;
+      }
+    }
+  }
+  const displayTheme: any = {
+    ...tempTheme,
+    palette: {
+      ...tempTheme.palette,
+      type: localDark,
+    },
+  };
   const [darkToggle, setDarkToggle] = useState({
-    checked: true,
+    checked: localDark === 'dark',
   });
-
-  const [activeTheme, setActiveTheme] = useState(bwsepia);
+  const [activeTheme, setActiveTheme] = useState(displayTheme);
   const themeConfig = createMuiTheme(activeTheme);
+
+  // useEffect(() => {
+  //   console.log('effect');
+
+  // }, [activeTheme]);
+
   const useStyles = makeStyles(() => {
     const bgRGB = hexToRGB(
       themeConfig.palette.primary[(themeConfig.palette.type as 'main') || 'dark' || 'light'],
