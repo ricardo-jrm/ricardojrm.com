@@ -1,75 +1,8 @@
-import { createMuiTheme /* , responsiveFontSizes */ } from '@material-ui/core/styles';
-import indigo from '@material-ui/core/colors/indigo';
-import pink from '@material-ui/core/colors/pink';
-import red from '@material-ui/core/colors/red';
+import typography from 'src/typography';
 
-const typography = {
-  fontFamily: [
-    '-apple-system',
-    'BlinkMacSystemFont',
-    '"Segoe UI"',
-    'Roboto',
-    'Radiance',
-    'Radiance-Black',
-    '"Helvetica Neue"',
-    'Arial',
-    'sans-serif',
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(','),
-  h1: {
-    fontFamily: ['Radiance-Black'].join(','),
-    // fontSize: '10vw',
-  },
-  h2: {
-    fontFamily: ['Radiance-Black'].join(','),
-  },
-  h3: {
-    fontFamily: ['Radiance-Black'].join(','),
-  },
-  h4: {
-    fontFamily: ['Radiance-Black'].join(','),
-    // fontSize: '3vw',
-    // Fix awkwrd spacing
-    // letterSpacing: '-0.01562em',
-    // lineHeight: '3vw',
-  },
-  h5: {
-    fontFamily: ['Radiance'].join(','),
-    fontWeight: 600,
-  },
-  h6: {
-    fontWeight: 600,
-  },
-  body1: {
-    fontWeight: 500,
-    fontSize: '1.1rem',
-  },
-};
-
-const appTheme = /* resposiveFontSizes( */ createMuiTheme({
-    palette: {
-      // type: 'light',
-      primary: indigo,
-      secondary: pink,
-      error: red,
-      contrastThreshold: 3,
-      tonalOffset: 0.2,
-      // background: {
-      //   default: '#fafafa',
-      // },
-      // text: {
-      //   primary: '#000',
-      //   secondary: '#000',
-      // },
-    },
-    typography: { ...typography },
-  }) /* ) */;
-
-const gold = createMuiTheme({
+const gold = {
   palette: {
-    type: 'light',
+    type: ('dark' as 'dark') || 'light' || undefined,
     primary: {
       main: '#c4a747',
       dark: '#263238',
@@ -87,11 +20,11 @@ const gold = createMuiTheme({
     tonalOffset: 0.2,
   },
   typography: { ...typography },
-});
+};
 
-const bwsepia = createMuiTheme({
+const bwsepia = {
   palette: {
-    type: 'dark',
+    type: ('dark' as 'dark') || 'light' || undefined,
     primary: {
       main: '#9e9e9e',
       dark: '#212121',
@@ -109,11 +42,11 @@ const bwsepia = createMuiTheme({
     tonalOffset: 0.2,
   },
   typography: { ...typography },
-});
+};
 
-const mecha = createMuiTheme({
+const mecha = {
   palette: {
-    type: 'light',
+    type: ('dark' as 'dark') || 'light' || undefined,
     primary: {
       main: '#807CAE',
       light: '#b3b0cf',
@@ -131,11 +64,11 @@ const mecha = createMuiTheme({
     tonalOffset: 0.2,
   },
   typography: { ...typography },
-});
+};
 
-const boom = createMuiTheme({
+const boom = {
   palette: {
-    type: 'light',
+    type: ('dark' as 'dark') || 'light' || undefined,
     primary: {
       main: '#701e0e',
       light: '#fefc7e',
@@ -151,11 +84,11 @@ const boom = createMuiTheme({
     tonalOffset: 0.2,
   },
   typography: { ...typography },
-});
+};
 
-const neo = createMuiTheme({
+const neo = {
   palette: {
-    type: 'light',
+    type: ('dark' as 'dark') || 'light' || undefined,
     primary: {
       dark: '#212433',
       main: '#4d4f5b',
@@ -173,11 +106,11 @@ const neo = createMuiTheme({
     tonalOffset: 0.2,
   },
   typography: { ...typography },
-});
+};
 
-const exotic = createMuiTheme({
+const exotic = {
   palette: {
-    type: 'light',
+    type: ('dark' as 'dark') || 'light' || undefined,
     primary: {
       main: '#3b875e',
       dark: '#325241',
@@ -194,11 +127,11 @@ const exotic = createMuiTheme({
     tonalOffset: 0.2,
   },
   typography: { ...typography },
-});
+};
 
-const liquid = createMuiTheme({
+const liquid = {
   palette: {
-    type: 'light',
+    type: ('dark' as 'dark') || 'light' || undefined,
     primary: {
       main: '#74d0f6',
       light: '#94c5fe',
@@ -216,7 +149,7 @@ const liquid = createMuiTheme({
     tonalOffset: 0.2,
   },
   typography: { ...typography },
-});
+};
 
 const globals = {
   vHidden: {
@@ -247,4 +180,4 @@ const globals = {
   },
 };
 
-export { appTheme, bwsepia, gold, mecha, boom, neo, liquid, exotic, globals };
+export { bwsepia, gold, mecha, boom, neo, liquid, exotic, globals };
