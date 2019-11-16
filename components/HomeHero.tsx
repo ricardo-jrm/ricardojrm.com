@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { ThemeProvider, useTheme, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider, createMuiTheme, useTheme, makeStyles } from '@material-ui/core/styles';
 import { bwsepia, gold, mecha, boom, neo, liquid, exotic, globals } from 'src/theme';
 
 import { hexToRGB } from 'utils/colors';
@@ -20,83 +20,87 @@ import HomeXP from 'components/HomeXP';
 import HomeSkills from 'components/HomeSkills';
 
 const myThemes = [
-  ['Black and White', bwsepia],
-  ["Fool's Gold", gold],
-  ['Mecha', mecha],
-  ['Boom', boom],
-  ['Neo Tokyo', neo],
-  ['liquid', liquid],
-  ['pineapple', exotic],
+  ['Black and White', createMuiTheme(bwsepia)],
+  ["Fool's Gold", createMuiTheme(gold)],
+  ['Mecha', createMuiTheme(mecha)],
+  ['Boom', createMuiTheme(boom)],
+  ['Neo Tokyo', createMuiTheme(neo)],
+  ['liquid', createMuiTheme(liquid)],
+  ['pineapple', createMuiTheme(exotic)],
 ];
 
-let theme = bwsepia;
-
-const useStyles = makeStyles(() => {
-  const bgRGB = hexToRGB(theme.palette.primary[theme.palette.type || 'main']);
-  return {
-    root: {
-      flexGrow: 1,
-    },
-    container: {
-      minHeight: '100vh',
-    },
-    button: {
-      margin: theme.spacing(0.5),
-      textTransform: 'none',
-      border: 0,
-    },
-    gifBG: {
-      backgroundImage: 'url("/static/img/light_nrg.gif")',
-    },
-    bg: {
-      backgroundColor: `rgb(${bgRGB.r}, ${bgRGB.g}, ${bgRGB.b}, 0.96)`,
-    },
-    title: {
-      // textStroke: `1px ${theme.palette.secondary.main}`,
-      // '-webkit-text-stroke': `1px ${theme.palette.secondary.main}`,
-      color:
-        theme.palette.type === 'dark' ? theme.palette.primary.light : theme.palette.primary.dark,
-    },
-    subtitle: {
-      color:
-        theme.palette.type === 'dark'
-          ? theme.palette.secondary.light
-          : theme.palette.secondary.dark,
-    },
-    link: {
-      color:
-        theme.palette.type === 'dark'
-          ? theme.palette.secondary.light
-          : theme.palette.secondary.dark,
-      '&:hover': {
-        color:
-          theme.palette.type === 'dark' ? theme.palette.primary.light : theme.palette.primary.dark,
-      },
-    },
-    details: {
-      color:
-        theme.palette.type === 'dark'
-          ? theme.palette.secondary.light
-          : theme.palette.secondary.dark,
-    },
-    ...globals,
-  };
-});
-
-const setTheme = (newTheme: any) => {
-  theme = newTheme;
-};
-
 const HomeHero = ({  }: IHomeHeroProps): any => {
-  const classes = useStyles();
-
   const [menu, setMenu] = useState(1);
-  const [activeTheme, setActiveTheme] = useState(theme);
+
+  const [darkToggle, setDarkToggle] = useState({
+    checked: true,
+  });
+
+  const [activeTheme, setActiveTheme] = useState(bwsepia);
+  const themeConfig = createMuiTheme(activeTheme);
+  const useStyles = makeStyles(() => {
+    const bgRGB = hexToRGB(
+      themeConfig.palette.primary[(themeConfig.palette.type as 'main') || 'dark' || 'light'],
+    );
+    return {
+      root: {
+        flexGrow: 1,
+      },
+      container: {
+        minHeight: '100vh',
+      },
+      button: {
+        margin: themeConfig.spacing(0.5),
+        textTransform: 'none',
+        border: 0,
+      },
+      gifBG: {
+        backgroundImage: 'url("/static/img/light_nrg.gif")',
+      },
+      bg: {
+        backgroundColor: `rgb(${bgRGB.r}, ${bgRGB.g}, ${bgRGB.b}, 0.96)`,
+      },
+      title: {
+        // textStroke: `1px ${theme.palette.secondary.main}`,
+        // '-webkit-text-stroke': `1px ${theme.palette.secondary.main}`,
+        color:
+          themeConfig.palette.type === 'dark'
+            ? themeConfig.palette.primary.light
+            : themeConfig.palette.primary.dark,
+      },
+      subtitle: {
+        color:
+          themeConfig.palette.type === 'dark'
+            ? themeConfig.palette.secondary.light
+            : themeConfig.palette.secondary.dark,
+      },
+      link: {
+        color:
+          themeConfig.palette.type === 'dark'
+            ? themeConfig.palette.secondary.light
+            : themeConfig.palette.secondary.dark,
+        '&:hover': {
+          color:
+            themeConfig.palette.type === 'dark'
+              ? themeConfig.palette.primary.light
+              : themeConfig.palette.primary.dark,
+        },
+      },
+      details: {
+        color:
+          themeConfig.palette.type === 'dark'
+            ? themeConfig.palette.secondary.light
+            : themeConfig.palette.secondary.dark,
+      },
+      ...globals,
+    };
+  });
+  const classes = useStyles();
 
   const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 
   return (
-    <ThemeProvider theme={activeTheme}>
+    <ThemeProvider theme={themeConfig}>
       <div className={`${classes.gifBG} bg-fixed`}>
         <div className={`${classes.root} ${classes.bg}`}>
           <Grid container className={`${classes.container}`} justify="center" alignItems="center">
@@ -258,7 +262,11 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                   </Box>
                 </Box>
                 <Box textAlign="center" mt={2}>
-                  <ThemePopover hook={setActiveTheme} array={myThemes} />
+                  <ThemePopover
+                    darkHook={{ darkToggle, setDarkToggle }}
+                    themeHook={{ activeTheme, setActiveTheme }}
+                    array={myThemes}
+                  />
                 </Box>
               </Grid>
               <Grid xs={12} md={9} lg={8} item>

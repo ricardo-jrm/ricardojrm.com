@@ -8,6 +8,7 @@ import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import PaletteIcon from '@material-ui/icons/Palette';
+import Switch from '@material-ui/core/Switch';
 
 const useStyles = makeStyles(() => {
   return {
@@ -17,8 +18,25 @@ const useStyles = makeStyles(() => {
   };
 });
 
-const ThemePopover = ({ hook, array }: IThemePopoverProps): any => {
-  console.log(hook);
+const useDarkMode = (theme: any, setTheme: any) => {
+  const {
+    palette: { type },
+  } = theme;
+  const newTheme = {
+    ...theme,
+    palette: {
+      ...theme.palette,
+      type: type === 'light' ? 'dark' : 'light',
+    },
+  };
+  setTheme(newTheme);
+};
+
+const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any => {
+  const handleToggle = (name: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
+    darkHook.setDarkToggle({ ...darkHook.darkToggle, [name]: event.target.checked });
+    useDarkMode(themeHook.activeTheme, themeHook.setActiveTheme);
+  };
 
   const classes = useStyles();
 
@@ -68,7 +86,7 @@ const ThemePopover = ({ hook, array }: IThemePopoverProps): any => {
             {array.map((
               theme: any, //  onClick={hook(theme[1])}
             ) => (
-              <Box>
+              <Box key={theme[0]}>
                 <Button style={{ width: '100%' }}>
                   <Box display="flex" alignItems="center" style={{ width: '100%' }} py={0.75}>
                     <Box display="flex-start" textAlign="start" flexGrow={1} pr={5}>
@@ -161,9 +179,26 @@ const ThemePopover = ({ hook, array }: IThemePopoverProps): any => {
             <Typography color="textPrimary" variant="h6">
               Mode:
             </Typography>
-            <Typography color="textPrimary" variant="body1">
-              {'Dark <-> Light'}
-            </Typography>
+            <Box display="flex" alignItems="center">
+              <Box>
+                <Typography variant="body1" color="textPrimary">
+                  Light
+                </Typography>
+              </Box>
+              <Box px={0.5}>
+                <Switch
+                  checked={darkHook.darkToggle.checked}
+                  onChange={handleToggle('checked')}
+                  value="checked"
+                  inputProps={{ 'aria-label': 'secondary checkbox' }}
+                />
+              </Box>
+              <Box>
+                <Typography variant="body1" color="textPrimary">
+                  Dark
+                </Typography>
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Popover>
@@ -172,7 +207,8 @@ const ThemePopover = ({ hook, array }: IThemePopoverProps): any => {
 };
 
 export interface IThemePopoverProps {
-  hook: any;
+  darkHook: any;
+  themeHook: any;
   array: any;
 }
 

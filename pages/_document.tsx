@@ -2,7 +2,6 @@ import React from 'react';
 import Document, { Html, Main, Head, NextScript } from 'next/document';
 
 import { ServerStyleSheets } from '@material-ui/core/styles';
-import { appTheme } from '../src/theme';
 
 class MyDocument extends Document {
   public render() {
@@ -14,7 +13,7 @@ class MyDocument extends Document {
           <meta name="language" content="en" />
 
           {/* PWA primary color */}
-          <meta name="theme-color" content={appTheme.palette.primary.main} />
+          {/* <meta name="theme-color" content={appTheme.palette.primary.main} /> */}
 
           <meta
             name="viewport"
