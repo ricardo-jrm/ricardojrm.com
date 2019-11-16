@@ -164,7 +164,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                             }}>
                             {' '}
                           </Grid>
-                          <Grid
+                          {/* <Grid
                             item
                             xs={4}
                             style={{
@@ -190,7 +190,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                               height: '20px',
                             }}>
                             {' '}
-                          </Grid>
+                          </Grid> */}
                         </Grid>
                       </Box>
                     </Box>

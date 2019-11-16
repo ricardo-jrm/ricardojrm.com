@@ -31,9 +31,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const HomeProfile = (): any => {
+const HomeProfile = ({ dark }: IHomeProfileProps): any => {
   const classes = useStyles();
-
+  const pathLogo = dark ? 'logo-i' : 'logo';
   return (
     <Box alignItems="center">
       <Typography color="textPrimary" variant="h6">
@@ -62,7 +62,7 @@ const HomeProfile = (): any => {
         <Box display="inline-block">
           <img
             className={`${classes.profIcon}`}
-            src="/static/img/nextjs-logo.png"
+            src={`/static/img/nextjs-${pathLogo}.png`}
             title="Next.js"
             alt="Next.js logo"
           />
@@ -114,5 +114,9 @@ const HomeProfile = (): any => {
     </Box>
   );
 };
+
+export interface IHomeProfileProps {
+  dark: boolean;
+}
 
 export default HomeProfile;

@@ -19,28 +19,33 @@ import HomeHire from 'components/HomeHire';
 import HomeXP from 'components/HomeXP';
 import HomeSkills from 'components/HomeSkills';
 
+const defaultTheme = {
+  name: 'Mecha',
+  config: mecha,
+  type: 'dark'
+}
 const myThemes = [
   ['Black and White', bwsepia],
-  ["Fool's Gold", gold],
+  ['Fools Gold', gold],
   ['Mecha', mecha],
   ['Boom', boom],
   ['Neo Tokyo', neo],
-  ['liquid', liquid],
-  ['watermelon', exotic],
+  ['Liquid', liquid],
+  ['Watermelon', exotic],
 ];
 
 const HomeHero = ({  }: IHomeHeroProps): any => {
   const [menu, setMenu] = useState(1);
 
-  let localDark = 'dark';
-  let localTheme = 'Black and White';
-  let tempTheme: any = bwsepia;
+  let localDark = defaultTheme.type;
+  let localTheme = defaultTheme.name;
+  let tempTheme: any = defaultTheme.config;
   if (process.browser) {
-    localDark = window.localStorage.getItem('DARK_MODE') || 'dark';
-    localTheme = window.localStorage.getItem('THEME') || 'Black and White';
+    localDark = window.localStorage.getItem('DARK_MODE') || defaultTheme.type;
+    localTheme = window.localStorage.getItem('THEME') || defaultTheme.name;
     for (let index = 0; index < myThemes.length; index++) {
       const theme = myThemes[index];
-      if (localTheme === theme[0] && localTheme !== 'Black and White') {
+      if (localTheme === theme[0] && localTheme !== defaultTheme.name) {
         [, tempTheme] = theme;
       }
     }
@@ -58,15 +63,28 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
   const [activeTheme, setActiveTheme] = useState(displayTheme);
   const themeConfig = createMuiTheme(activeTheme);
 
-  // useEffect(() => {
-  //   console.log('effect');
-
-  // }, [activeTheme]);
-
   const useStyles = makeStyles(() => {
     const bgRGB = hexToRGB(
       themeConfig.palette.primary[(themeConfig.palette.type as 'main') || 'dark' || 'light'],
     );
+    let myBG;
+    switch (localTheme) {
+      case 'Boom':
+        myBG = '/static/img/red_nrg.gif';
+        break;
+      case 'Black and White':
+        myBG = '/static/img/3d_fractal.gif';
+        break;
+      case 'Neo Tokyo':
+        myBG = '/static/img/circuit.gif';
+        break;
+      case 'Mecha':
+        myBG = '/static/img/space_cartoon.gif';
+        break;
+      default:
+        myBG = '/static/img/light_nrg.gif';
+        break;
+    }
     return {
       root: {
         flexGrow: 1,
@@ -80,10 +98,10 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
         border: 0,
       },
       gifBG: {
-        backgroundImage: 'url("/static/img/light_nrg.gif")',
+        backgroundImage: `url(${myBG})`,
       },
       bg: {
-        backgroundColor: `rgb(${bgRGB.r}, ${bgRGB.g}, ${bgRGB.b}, 0.96)`,
+        backgroundColor: `rgb(${bgRGB.r}, ${bgRGB.g}, ${bgRGB.b}, 0.90)`,
       },
       title: {
         // textStroke: `1px ${theme.palette.secondary.main}`,
@@ -116,6 +134,10 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
           themeConfig.palette.type === 'dark'
             ? themeConfig.palette.secondary.light
             : themeConfig.palette.secondary.dark,
+      },
+      ovFlow: {
+        overflow: 'auto',
+        maxHeight: '45vh',
       },
       ...globals,
     };
@@ -295,21 +317,21 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 </Box>
               </Grid>
               <Grid xs={12} md={9} lg={8} item>
-                <Box p={2}>
+                <Box className={classes.ovFlow} p={2}>
                   <Box display={menu === 0 ? 'block' : 'none'} className="animated fadeIn">
                     <HomeAbout />
                   </Box>
                   <Box display={menu === 1 ? 'block' : 'none'} className="animated fadeIn">
-                    <HomeProfile />
+                    <HomeProfile dark={darkToggle.checked} />
                   </Box>
                   <Box display={menu === 2 ? 'block' : 'none'} className="animated fadeIn">
                     <HomeHire />
                   </Box>
                   <Box display={menu === 3 ? 'block' : 'none'} className="animated fadeIn">
-                    <HomeXP />
+                    <HomeXP dark={darkToggle.checked} />
                   </Box>
                   <Box display={menu === 4 ? 'block' : 'none'} className="animated fadeIn">
-                    <HomeSkills />
+                    <HomeSkills dark={darkToggle.checked} />
                   </Box>
                 </Box>
               </Grid>
