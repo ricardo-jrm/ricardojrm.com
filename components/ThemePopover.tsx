@@ -38,6 +38,10 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
     useDarkMode(themeHook.activeTheme, themeHook.setActiveTheme);
   };
 
+  const handleTheme = (newTheme: any) => {
+    themeHook.setActiveTheme(newTheme);
+  };
+
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
@@ -84,10 +88,13 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
               Themes:
             </Typography>
             {array.map((
-              theme: any, //  onClick={hook(theme[1])}
+              theme: any, // onClick={themeHook.setActiveTheme(theme[1])}
             ) => (
               <Box key={theme[0]}>
-                <Button style={{ width: '100%' }}>
+                <Button
+                  type="button"
+                  style={{ width: '100%' }}
+                  onClick={() => handleTheme(theme[1])}>
                   <Box display="flex" alignItems="center" style={{ width: '100%' }} py={0.75}>
                     <Box display="flex-start" textAlign="start" flexGrow={1} pr={5}>
                       <Typography color="textPrimary" variant="body1">
