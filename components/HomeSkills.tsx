@@ -50,8 +50,8 @@ const HomeSkills = ({ dark }: IHomeSkillsProps): any => {
     ['ECMAscript', '/static/img/ecmascript-logo.png'],
     ['Express.js', '/static/img/express-logo.png'],
     ['Git', `/static/img/git-${pathLogo}.png`],
-    ['React Native', '/static/img/reactnative-logo.png'],
     ['Android Studio', '/static/img/androidstudio-logo.png'],
+    ['React Native', '/static/img/reactnative-logo.png'],
     ['SCRUM', '/static/img/scrum-logo.png'],
     ['Adobe Creative Cloud', '/static/img/adobecc-logo.png'],
     ['Aseprite', '/static/img/aseprite-logo.png'],
@@ -67,7 +67,7 @@ const HomeSkills = ({ dark }: IHomeSkillsProps): any => {
       <Grid container>
         {skills.map((skill) => {
           return (
-            <Grid item xs={3} key={skill[0]}>
+            <Grid item xs={6} sm={4} md={3} key={skill[0]}>
               <Box display="flex" className={`${classes.skillBox}`} alignItems="center">
                 <Box display="inline-block">
                   <img

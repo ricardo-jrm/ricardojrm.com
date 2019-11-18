@@ -22,8 +22,8 @@ import HomeSkills from 'components/HomeSkills';
 const defaultTheme = {
   name: 'Mecha',
   config: mecha,
-  type: 'dark'
-}
+  type: 'dark',
+};
 const myThemes = [
   ['Black and White', bwsepia],
   ['Fools Gold', gold],
@@ -137,7 +137,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
       },
       ovFlow: {
         overflow: 'auto',
-        maxHeight: '45vh',
+        height: '375px',
       },
       ...globals,
     };
@@ -153,14 +153,17 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
           <Grid container className={`${classes.container}`} justify="center" alignItems="center">
             <Grid container item xs={12} sm={11} md={10} lg={9} justify="flex-start">
               <Grid xs={12} item>
-                <Box display="inline-block">
-                  <Typography className={`${classes.title}`} color="textPrimary" variant="h1">
+                <Box display="inline-block" pt={{ xs: 5 }}>
+                  <Typography
+                    className={`${classes.title} transitions`}
+                    color="textPrimary"
+                    variant="h1">
                     RicardoJRM
                   </Typography>
                 </Box>
               </Grid>
               <Grid xs={12} item>
-                <Box>
+                <Box pb={3}>
                   <Typography
                     variant="h4"
                     className={`${classes.subtitle}`}
@@ -195,6 +198,13 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                       </Typography>
                     </Button>
                   </ButtonGroup>
+                  <Box
+                    pt={1}
+                    pb={4}
+                    display={{ xs: menu === 1 ? 'block' : 'none', md: 'none' }}
+                    className="animated fadeIn">
+                    <HomeProfile dark={darkToggle.checked} />
+                  </Box>
                   <ButtonGroup fullWidth>
                     <Button onClick={() => setMenu(3)} className={classes.button}>
                       <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
@@ -218,6 +228,13 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                       </Typography>
                     </Button>
                   </ButtonGroup>
+                  <Box
+                    pt={1}
+                    pb={4}
+                    display={{ xs: menu === 3 ? 'block' : 'none', md: 'none' }}
+                    className="animated fadeIn">
+                    <HomeXP dark={darkToggle.checked} />
+                  </Box>
                   <ButtonGroup fullWidth>
                     <Button onClick={() => setMenu(4)} className={classes.button}>
                       <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
@@ -241,6 +258,13 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                       </Typography>
                     </Button>
                   </ButtonGroup>
+                  <Box
+                    pt={1}
+                    pb={4}
+                    display={{ xs: menu === 4 ? 'block' : 'none', md: 'none' }}
+                    className="animated fadeIn">
+                    <HomeSkills dark={darkToggle.checked} />
+                  </Box>
                   <ButtonGroup fullWidth>
                     <Button onClick={() => setMenu(2)} className={`${classes.button}`}>
                       <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
@@ -264,6 +288,13 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                       </Typography>
                     </Button>
                   </ButtonGroup>
+                  <Box
+                    pt={1}
+                    pb={4}
+                    display={{ xs: menu === 2 ? 'block' : 'none', md: 'none' }}
+                    className="animated fadeIn">
+                    <HomeHire />
+                  </Box>
 
                   <Box display="none">
                     <ButtonGroup fullWidth>
@@ -308,7 +339,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                     </Link>
                   </Box>
                 </Box>
-                <Box textAlign="center" mt={2}>
+                <Box textAlign="center" mt={2} pb={{ xs: 4, md: 2 }}>
                   <ThemePopover
                     darkHook={{ darkToggle, setDarkToggle }}
                     themeHook={{ activeTheme, setActiveTheme }}
@@ -317,7 +348,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 </Box>
               </Grid>
               <Grid xs={12} md={9} lg={8} item>
-                <Box className={classes.ovFlow} p={2}>
+                <Box className={classes.ovFlow} display={{ xs: 'none', md: 'block' }} p={2}>
                   <Box display={menu === 0 ? 'block' : 'none'} className="animated fadeIn">
                     <HomeAbout />
                   </Box>
