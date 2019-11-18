@@ -20,7 +20,7 @@ import HomeXP from 'components/HomeXP';
 import HomeSkills from 'components/HomeSkills';
 
 const defaultTheme = {
-  name: 'Mecha',
+  name: 'trip',
   config: mecha,
   type: 'dark',
 };
