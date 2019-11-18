@@ -42,72 +42,92 @@ const HomeProfile = ({ dark }: IHomeProfileProps): any => {
 
       <Box display="flex" className={`${classes.profBox}`} alignItems="center">
         <Box display="inline-block">
-          <img
-            className={`${classes.profIcon}`}
-            src="/static/img/reactjs-logo.png"
+          <Link
+            href="https://reactjs.org/"
             title="React.js"
-            alt="React.js logo"
-          />
+            target="_blank"
+            rel="noopener noreferrer"
+            color="inherit">
+            <img
+              className={`${classes.profIcon}`}
+              src="/static/img/reactjs-logo.png"
+              title="React.js"
+              alt="React.js logo"
+            />
+          </Link>
         </Box>
         <Box display="inline-block">
           <Typography className="transitions" color="textPrimary" variant="body1">
-            <Link href="/" color="inherit">
-              React.js (3+ years)
-            </Link>
+            React.js (3+ years)
           </Typography>
         </Box>
       </Box>
 
       <Box display="flex" className={`${classes.profBox}`} alignItems="center">
         <Box display="inline-block">
-          <img
-            className={`${classes.profIcon}`}
-            src={`/static/img/nextjs-${pathLogo}.png`}
+          <Link
+            href="https://nextjs.org/"
             title="Next.js"
-            alt="Next.js logo"
-          />
+            target="_blank"
+            rel="noopener noreferrer"
+            color="inherit">
+            <img
+              className={`${classes.profIcon}`}
+              src={`/static/img/nextjs-${pathLogo}.png`}
+              title="Next.js"
+              alt="Next.js logo"
+            />
+          </Link>
         </Box>
         <Box display="inline-block">
           <Typography className="transitions" color="textPrimary" variant="body1">
-            <Link href="/" color="inherit">
-              Next.js
-            </Link>
+            Next.js
           </Typography>
         </Box>
       </Box>
 
       <Box display="flex" className={`${classes.profBox}`} alignItems="center">
         <Box display="inline-block">
-          <img
-            className={`${classes.profIcon}`}
-            src="/static/img/typescript-logo.png"
+          <Link
+            href="https://www.typescriptlang.org/"
             title="Typescript"
-            alt="Typescript logo"
-          />
+            target="_blank"
+            rel="noopener noreferrer"
+            color="inherit">
+            <img
+              className={`${classes.profIcon}`}
+              src="/static/img/typescript-logo.png"
+              title="Typescript"
+              alt="Typescript logo"
+            />
+          </Link>
         </Box>
         <Box display="inline-block">
           <Typography className="transitions" color="textPrimary" variant="body1">
-            <Link href="/" color="inherit">
-              Typescript
-            </Link>
+            Typescript
           </Typography>
         </Box>
       </Box>
 
       <Box display="flex" className={`${classes.profBox}`} alignItems="center">
         <Box display="inline-block">
-          <img
-            className={`${classes.profIcon}`}
-            src="/static/img/materialui-logo.png"
+          <Link
+            href="https://material-ui.com/"
             title="Material-UI"
-            alt="Material-UI logo"
-          />
+            target="_blank"
+            rel="noopener noreferrer"
+            color="inherit">
+            <img
+              className={`${classes.profIcon}`}
+              src="/static/img/materialui-logo.png"
+              title="Material-UI"
+              alt="Material-UI logo"
+            />
+          </Link>
         </Box>
         <Box display="inline-block">
           <Typography className="transitions" color="textPrimary" variant="body1">
-            <Link href="/" color="inherit">
-              Material-UI
-            </Link>
+            Material-UI
           </Typography>
         </Box>
       </Box>

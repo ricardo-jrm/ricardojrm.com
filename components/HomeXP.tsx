@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
   xpImg: {
@@ -40,12 +41,19 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
         </Typography>
         <Box display="flex" alignItems="start" py={0.5}>
           <Box className={`${classes.xpWrap}`} pt={0.75} display="inline-block">
-            <img
-              className={`${classes.xpImg}`}
-              src={`static/img/glaiveware-${pathLogo}.png`}
+            <Link
+              href="https://glaiveware.com/"
               title="Glaiveware"
-              alt="Glaiveware logo"
-            />
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit">
+              <img
+                className={`${classes.xpImg}`}
+                src={`static/img/glaiveware-${pathLogo}.png`}
+                title="Glaiveware"
+                alt="Glaiveware logo"
+              />
+            </Link>
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="body1">
@@ -63,12 +71,19 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
         </Typography>
         <Box display="flex" alignItems="start" py={0.5}>
           <Box className={`${classes.xpWrap}`} display="inline-block" alignContent="center">
-            <img
-              className={`${classes.xpImg}`}
-              src="/static/img/freelancer-logo.png"
+            <Link
+              href="https://www.freelancer.com/"
               title="Freelancer"
-              alt="Freelancer logo"
-            />
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit">
+              <img
+                className={`${classes.xpImg}`}
+                src="/static/img/freelancer-logo.png"
+                title="Freelancer"
+                alt="Freelancer logo"
+              />
+            </Link>
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="body1">
@@ -81,12 +96,19 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
         </Box>
         <Box display="flex" alignItems="start" py={0.5}>
           <Box className={`${classes.xpWrap}`} display="inline-block">
-            <img
-              className={`${classes.xpImg}`}
-              src="/static/img/aha-logo.png"
+            <Link
+              href="https://www.heart.org/"
               title="American Heart Association"
-              alt="American Heart Association logo"
-            />
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit">
+              <img
+                className={`${classes.xpImg}`}
+                src="/static/img/aha-logo.png"
+                title="American Heart Association"
+                alt="American Heart Association logo"
+              />
+            </Link>
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="body1">
@@ -100,16 +122,23 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
       </Box>
       <Box py={2}>
         <Typography className="transitions" color="textPrimary" variant="h6">
-          2015: NextBitt
+          2015: NextBitt Business Technologies
         </Typography>
         <Box display="flex" alignItems="start" py={0.5}>
           <Box className={`${classes.xpWrap}`} display="inline-block">
-            <img
-              className={`${classes.xpImg}`}
-              src="/static/img/nextbitt-logo.png"
-              title="Nextbitt"
-              alt="Nextbitt logo"
-            />
+            <Link
+              href="http://nextbitt.com/"
+              title="Nextbitt Business Technologies"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit">
+              <img
+                className={`${classes.xpImg}`}
+                src="/static/img/nextbitt-logo.png"
+                title="Nextbitt Business Technologies"
+                alt="Nextbitt logo"
+              />
+            </Link>
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="body1">
@@ -124,12 +153,19 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
         </Typography>
         <Box display="flex" alignItems="start" py={0.5}>
           <Box className={`${classes.xpWrap}`} display="inline-block">
-            <img
-              className={`${classes.xpImg}`}
-              src="/static/img/s4y-logo.png"
+            <Link
+              href="https://blog.science4you.pt/"
               title="Science4you"
-              alt="Science4you logo"
-            />
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit">
+              <img
+                className={`${classes.xpImg}`}
+                src="/static/img/s4y-logo.png"
+                title="Science4you"
+                alt="Science4you logo"
+              />
+            </Link>
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="body1">

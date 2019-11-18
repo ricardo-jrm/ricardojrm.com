@@ -153,7 +153,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
   });
   const classes = useStyles();
 
-  const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
+  // const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 
   return (
     <ThemeProvider theme={themeConfig}>
@@ -348,17 +348,35 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 </Box>
                 <Box textAlign="center">
                   <Box display="inline-block">
-                    <Link href="/" color="textPrimary" onClick={preventDefault}>
+                    <Link
+                      href="mailto:ricardoraposomota@gmail.com"
+                      title="Contact Ricardo via email"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="textPrimary"
+                      >
                       <i className={`transitions ${classes.link} fas fa-at fa-4x`} />
                     </Link>
                   </Box>
                   <Box mx={2} display="inline-block">
-                    <Link href="/" color="textPrimary" onClick={preventDefault}>
+                    <Link
+                      href="https://www.linkedin.com/in/ricardo-jrm/"
+                      title="Visit Ricardo's LinkedIn page"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="textPrimary"
+                      >
                       <i className={`transitions ${classes.link} fab fa-linkedin fa-4x`} />
                     </Link>
                   </Box>
                   <Box display="inline-block">
-                    <Link href="/" color="textPrimary" onClick={preventDefault}>
+                    <Link
+                      href="https://github.com/ricardo-jrm"
+                      title="Visit Ricardo's Github page"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="textPrimary"
+                      >
                       <i className={`transitions ${classes.link} fab fa-github fa-4x`} />
                     </Link>
                   </Box>
