@@ -6,39 +6,66 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
-const useStyles = makeStyles((theme) => ({
-  profIcon: {
-    width: '35px',
-    height: 'auto',
-    marginRight: theme.spacing(1.2),
-    userSelect: 'none' as
-      | 'contain'
-      | 'all'
-      | '-moz-initial'
-      | 'inherit'
-      | 'initial'
-      | 'revert'
-      | 'unset'
-      | 'auto'
-      | 'none'
-      | 'text'
-      | '-moz-none'
-      | 'element'
-      | undefined,
-  },
-  profBox: {
-    height: '45px',
-  },
-}));
-
-const HomeProfile = ({ dark }: IHomeProfileProps): any => {
+const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
+  const useStyles = makeStyles(() => ({
+    profIcon: {
+      width: '35px',
+      height: 'auto',
+      marginRight: theme.spacing(1.2),
+      userSelect: 'none' as
+        | 'contain'
+        | 'all'
+        | '-moz-initial'
+        | 'inherit'
+        | 'initial'
+        | 'revert'
+        | 'unset'
+        | 'auto'
+        | 'none'
+        | 'text'
+        | '-moz-none'
+        | 'element'
+        | undefined,
+    },
+    profBox: {
+      height: '45px',
+    },
+    detail: {
+      marginRight: theme.spacing(1.2),
+      color:
+        theme.palette.type === 'dark'
+          ? theme.palette.secondary.light
+          : theme.palette.secondary.dark,
+    },
+  }));
   const classes = useStyles();
   const pathLogo = dark ? 'logo-i' : 'logo';
   return (
     <Box alignItems="center">
-      <Typography className="transitions" color="textPrimary" variant="h6">
-        Senior Frontend Developer near Lisbon, Portugal with an effective stack of:
-      </Typography>
+      <Box py={0.75}>
+        <Typography className="transitions" color="textPrimary" variant="body1">
+          <i className={`fas fa-chevron-right ${classes.detail}`} />
+          Senior frontend developer
+        </Typography>
+      </Box>
+      <Box py={0.75}>
+        <Typography className="transitions" color="textPrimary" variant="body1">
+          <i className={`fas fa-chevron-right ${classes.detail}`} />
+          Near Lisbon, Portugal
+        </Typography>
+      </Box>
+      <Box py={0.75}>
+        <Typography className="transitions" color="textPrimary" variant="body1">
+          <i className={`fas fa-chevron-right ${classes.detail}`} />
+          Full-time & full remote
+        </Typography>
+      </Box>
+      <Box py={0.75} pb={2}>
+        <Typography className="transitions" color="textPrimary" variant="body1">
+          <i className={`fas fa-chevron-right ${classes.detail}`} />
+          Looking for challenging projects
+        </Typography>
+      </Box>
 
       <Box display="flex" className={`${classes.profBox}`} alignItems="center">
         <Box display="inline-block">
@@ -57,7 +84,7 @@ const HomeProfile = ({ dark }: IHomeProfileProps): any => {
           </Link>
         </Box>
         <Box display="inline-block">
-          <Typography className="transitions" color="textPrimary" variant="body1">
+          <Typography className="transitions" color="textPrimary" variant="body2">
             React.js (3+ years)
           </Typography>
         </Box>
@@ -80,7 +107,7 @@ const HomeProfile = ({ dark }: IHomeProfileProps): any => {
           </Link>
         </Box>
         <Box display="inline-block">
-          <Typography className="transitions" color="textPrimary" variant="body1">
+          <Typography className="transitions" color="textPrimary" variant="body2">
             Next.js
           </Typography>
         </Box>
@@ -103,7 +130,7 @@ const HomeProfile = ({ dark }: IHomeProfileProps): any => {
           </Link>
         </Box>
         <Box display="inline-block">
-          <Typography className="transitions" color="textPrimary" variant="body1">
+          <Typography className="transitions" color="textPrimary" variant="body2">
             Typescript
           </Typography>
         </Box>
@@ -126,7 +153,7 @@ const HomeProfile = ({ dark }: IHomeProfileProps): any => {
           </Link>
         </Box>
         <Box display="inline-block">
-          <Typography className="transitions" color="textPrimary" variant="body1">
+          <Typography className="transitions" color="textPrimary" variant="body2">
             Material-UI
           </Typography>
         </Box>
@@ -137,6 +164,7 @@ const HomeProfile = ({ dark }: IHomeProfileProps): any => {
 
 export interface IHomeProfileProps {
   dark: boolean;
+  theme: any;
 }
 
 export default HomeProfile;
