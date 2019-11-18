@@ -11,9 +11,25 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="Content-Language" content="en" />
           <meta name="language" content="en" />
+          <meta name="generator" content="RicardoJRM (www.ricardojrm.com)" />
+          <meta name="author" content="RicardoJRM (www.ricardojrm.com)" />
+          <meta name="reference" content="RicardoJRM" />
+
+          <meta name="robots" content="index,follow" />
+          {/* <link rel="manifest" href="/manifest.json" /> */}
+
+          <link rel="canonical" href="https://www.ricardojrm.com" />
+
+          <link rel="dns-prefetch" href="https://use.fontawesome.com" />
+          <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+          <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+          {/* <link rel="dns-prefetch" href="https://www.google.com" />
+          <link rel="dns-prefetch" href="https://www.gstatic.com" />
+          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+          <link rel="dns-prefetch" href="https://www.googletagmanager.com" /> */}
 
           {/* PWA primary color */}
-          {/* <meta name="theme-color" content={appTheme.palette.primary.main} /> */}
+          <meta name="theme-color" content="#807CAE" />
 
           <meta
             name="viewport"
