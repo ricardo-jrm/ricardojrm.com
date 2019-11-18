@@ -10,7 +10,12 @@
 }
 
 .transitions {
-  transition: color 3s ease, background-color 3s ease, opacity 3s ease !important;
+  transition: color 0.3s ease, background-color 0.3s ease, background-imgae 0.3s ease,
+    opacity 0.3s ease !important;
+}
+
+.MuiPaper-root {
+  transition: color 0.3s ease, background-color 0.3s ease !important;
 }
 
 .bg-fixed {

@@ -35,7 +35,7 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
   return (
     <Box>
       <Box py={2}>
-        <Typography color="textPrimary" variant="h6">
+        <Typography className="transitions" color="textPrimary" variant="h6">
           2017-2019
         </Typography>
         <Box display="flex" alignItems="center" py={0.5}>
@@ -48,17 +48,17 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography color="textPrimary" variant="body1">
+            <Typography className="transitions" color="textPrimary" variant="body1">
               Glaiveware - Full Stack Developer, Project Manager, Business owner & Co-Founder
             </Typography>
-            <Typography color="textPrimary" variant="body2">
+            <Typography className="transitions" color="textPrimary" variant="body2">
               Full Stack Developer, Project Manager, Business owner & Co-Founder
             </Typography>
           </Box>
         </Box>
       </Box>
       <Box py={2}>
-        <Typography color="textPrimary" variant="h6">
+        <Typography className="transitions" color="textPrimary" variant="h6">
           2016
         </Typography>
         <Box display="flex" alignItems="center" py={0.5}>
@@ -71,10 +71,10 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography color="textPrimary" variant="body1">
+            <Typography className="transitions" color="textPrimary" variant="body1">
               Freelancer - Mobile Developer
             </Typography>
-            <Typography color="textPrimary" variant="body2">
+            <Typography className="transitions" color="textPrimary" variant="body2">
               React Native + libsignal-protocol
             </Typography>
           </Box>
@@ -89,17 +89,17 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography color="textPrimary" variant="body1">
+            <Typography className="transitions" color="textPrimary" variant="body1">
               American Heart Association - React Developer
             </Typography>
-            <Typography color="textPrimary" variant="body2">
+            <Typography className="transitions" color="textPrimary" variant="body2">
               React dashboard
             </Typography>
           </Box>
         </Box>
       </Box>
       <Box py={2}>
-        <Typography color="textPrimary" variant="h6">
+        <Typography className="transitions" color="textPrimary" variant="h6">
           2015: NextBitt
         </Typography>
         <Box display="flex" alignItems="center" py={0.5}>
@@ -112,14 +112,14 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography color="textPrimary" variant="body1">
+            <Typography className="transitions" color="textPrimary" variant="body1">
               Frontend Developer: Javascript + C#
             </Typography>
           </Box>
         </Box>
       </Box>
       <Box py={2}>
-        <Typography color="textPrimary" variant="h6">
+        <Typography className="transitions" color="textPrimary" variant="h6">
           2014: Science4you
         </Typography>
         <Box display="flex" alignItems="center" py={0.5}>
@@ -132,7 +132,7 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
             />
           </Box>
           <Box display="inline-block">
-            <Typography color="textPrimary" variant="body1">
+            <Typography className="transitions" color="textPrimary" variant="body1">
               Backend Developer: Java + MySQL
             </Typography>
           </Box>
@@ -143,7 +143,7 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
 };
 
 export interface IHomeXPProps {
-  dark: boolean
+  dark: boolean;
 }
 
 export default HomeXP;

@@ -78,7 +78,7 @@ const HomeSkills = ({ dark }: IHomeSkillsProps): any => {
                   />
                 </Box>
                 <Box display="inline-block">
-                  <Typography color="textPrimary" variant="body1">
+                  <Typography className="transitions" color="textPrimary" variant="body1">
                     {skill[0]}
                   </Typography>
                 </Box>

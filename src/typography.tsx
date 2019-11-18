@@ -36,6 +36,7 @@ export default {
     '"Apple Color Emoji"',
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
+    '"Radiance-Distressed"',
   ].join(','),
   h1: {
     fontFamily: ['Radiance-Black'].join(','),

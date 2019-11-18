@@ -101,7 +101,9 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
         backgroundImage: `url(${myBG})`,
       },
       bg: {
-        backgroundColor: `rgb(${bgRGB.r}, ${bgRGB.g}, ${bgRGB.b}, 0.90)`,
+        backgroundColor: `rgb(${bgRGB.r}, ${bgRGB.g}, ${bgRGB.b}, ${
+          themeConfig.palette.type === 'dark' ? '0.90' : '0.90'
+        })`,
       },
       title: {
         // textStroke: `1px ${theme.palette.secondary.main}`,
@@ -114,8 +116,17 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
       subtitle: {
         color:
           themeConfig.palette.type === 'dark'
+            ? themeConfig.palette.primary.dark
+            : themeConfig.palette.primary.light,
+        backgroundColor:
+          themeConfig.palette.type === 'dark'
             ? themeConfig.palette.secondary.light
             : themeConfig.palette.secondary.dark,
+        display: 'inline-block',
+        // paddingTop: themeConfig.spacing(0.5),
+        // paddingBottom: themeConfig.spacing(0.5),
+        paddingLeft: themeConfig.spacing(4),
+        paddingRight: themeConfig.spacing(4),
       },
       link: {
         color:
@@ -148,8 +159,8 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
 
   return (
     <ThemeProvider theme={themeConfig}>
-      <div className={`${classes.gifBG} bg-fixed`}>
-        <div className={`${classes.root} ${classes.bg}`}>
+      <div className={`transitions ${classes.gifBG} bg-fixed`}>
+        <div className={`transitions ${classes.root} ${classes.bg}`}>
           <Grid container className={`${classes.container}`} justify="center" alignItems="center">
             <Grid container item xs={12} sm={11} md={10} lg={9} justify="flex-start">
               <Grid xs={12} item>
@@ -166,7 +177,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 <Box pb={{ xs: 3, md: 1, lg: 2, xl: 4 }}>
                   <Typography
                     variant="h4"
-                    className={`${classes.subtitle}`}
+                    className={`${classes.subtitle} transitions`}
                     color="textPrimary"
                     component="h2">
                     React Developer
@@ -177,7 +188,10 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 <Box p={2}>
                   <ButtonGroup fullWidth>
                     <Button onClick={() => setMenu(1)} className={classes.button}>
-                      <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                      <Typography
+                        className={`${classes.crsPointer} transitions`}
+                        variant="h5"
+                        component="h3">
                         <span
                           className={
                             menu === 1
@@ -207,7 +221,10 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                   </Box>
                   <ButtonGroup fullWidth>
                     <Button onClick={() => setMenu(3)} className={classes.button}>
-                      <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                      <Typography
+                        className={`transitions ${classes.crsPointer}`}
+                        variant="h5"
+                        component="h3">
                         <span
                           className={
                             menu === 3
@@ -237,7 +254,10 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                   </Box>
                   <ButtonGroup fullWidth>
                     <Button onClick={() => setMenu(4)} className={classes.button}>
-                      <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                      <Typography
+                        className={`transitions ${classes.crsPointer}`}
+                        variant="h5"
+                        component="h3">
                         <span
                           className={
                             menu === 4
@@ -267,7 +287,10 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                   </Box>
                   <ButtonGroup fullWidth>
                     <Button onClick={() => setMenu(2)} className={`${classes.button}`}>
-                      <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                      <Typography
+                        className={`transitions ${classes.crsPointer}`}
+                        variant="h5"
+                        component="h3">
                         <span
                           className={
                             menu === 2
@@ -299,7 +322,10 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                   <Box display="none">
                     <ButtonGroup fullWidth>
                       <Button onClick={() => setMenu(0)} className={classes.button}>
-                        <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                        <Typography
+                          className={`transitions ${classes.crsPointer}`}
+                          variant="h5"
+                          component="h3">
                           <span
                             className={
                               menu === 0
@@ -325,17 +351,17 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 <Box textAlign="center">
                   <Box display="inline-block">
                     <Link href="/" color="textPrimary" onClick={preventDefault}>
-                      <i className={`${classes.link} fas fa-at fa-4x`} />
+                      <i className={`transitions ${classes.link} fas fa-at fa-4x`} />
                     </Link>
                   </Box>
                   <Box mx={2} display="inline-block">
                     <Link href="/" color="textPrimary" onClick={preventDefault}>
-                      <i className={`${classes.link} fab fa-linkedin fa-4x`} />
+                      <i className={`transitions ${classes.link} fab fa-linkedin fa-4x`} />
                     </Link>
                   </Box>
                   <Box display="inline-block">
                     <Link href="/" color="textPrimary" onClick={preventDefault}>
-                      <i className={`${classes.link} fab fa-github fa-4x`} />
+                      <i className={`transitions ${classes.link} fab fa-github fa-4x`} />
                     </Link>
                   </Box>
                 </Box>
