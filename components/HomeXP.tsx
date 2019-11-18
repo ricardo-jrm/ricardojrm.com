@@ -38,8 +38,8 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
         <Typography className="transitions" color="textPrimary" variant="h6">
           2017-2019
         </Typography>
-        <Box display="flex" alignItems="center" py={0.5}>
-          <Box className={`${classes.xpWrap}`} display="inline-block">
+        <Box display="flex" alignItems="start" py={0.5}>
+          <Box className={`${classes.xpWrap}`} pt={0.75} display="inline-block">
             <img
               className={`${classes.xpImg}`}
               src={`static/img/glaiveware-${pathLogo}.png`}
@@ -61,7 +61,7 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
         <Typography className="transitions" color="textPrimary" variant="h6">
           2016
         </Typography>
-        <Box display="flex" alignItems="center" py={0.5}>
+        <Box display="flex" alignItems="start" py={0.5}>
           <Box className={`${classes.xpWrap}`} display="inline-block" alignContent="center">
             <img
               className={`${classes.xpImg}`}
@@ -79,7 +79,7 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
             </Typography>
           </Box>
         </Box>
-        <Box display="flex" alignItems="center" py={0.5}>
+        <Box display="flex" alignItems="start" py={0.5}>
           <Box className={`${classes.xpWrap}`} display="inline-block">
             <img
               className={`${classes.xpImg}`}
@@ -102,7 +102,7 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
         <Typography className="transitions" color="textPrimary" variant="h6">
           2015: NextBitt
         </Typography>
-        <Box display="flex" alignItems="center" py={0.5}>
+        <Box display="flex" alignItems="start" py={0.5}>
           <Box className={`${classes.xpWrap}`} display="inline-block">
             <img
               className={`${classes.xpImg}`}
@@ -122,7 +122,7 @@ const HomeXP = ({ dark }: IHomeXPProps): any => {
         <Typography className="transitions" color="textPrimary" variant="h6">
           2014: Science4you
         </Typography>
-        <Box display="flex" alignItems="center" py={0.5}>
+        <Box display="flex" alignItems="start" py={0.5}>
           <Box className={`${classes.xpWrap}`} display="inline-block">
             <img
               className={`${classes.xpImg}`}

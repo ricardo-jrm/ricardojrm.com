@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
-import { bwsepia, gold, mecha, boom, neo, liquid, exotic, globals } from 'src/theme';
+import { bwsepia, mecha, boom, neo, liquid, globals } from 'src/theme';
 
 import { hexToRGB } from 'utils/colors';
 
@@ -25,13 +25,11 @@ const defaultTheme = {
   type: 'dark',
 };
 const myThemes = [
-  ['Black and White', bwsepia],
-  ['Fools Gold', gold],
-  ['Mecha', mecha],
-  ['Boom', boom],
-  ['Neo Tokyo', neo],
-  ['Liquid', liquid],
-  ['Watermelon', exotic],
+  ['trip', mecha, 'Voyage'],
+  ['liquid', liquid, 'Cooldown'],
+  ['fractal', bwsepia, 'Fractal'],
+  ['neo', neo, 'Circuit'],
+  ['boom', boom, 'Fission'],
 ];
 
 const HomeHero = ({  }: IHomeHeroProps): any => {
@@ -69,16 +67,16 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
     );
     let myBG;
     switch (localTheme) {
-      case 'Boom':
+      case 'boom':
         myBG = '/static/img/red_nrg.gif';
         break;
-      case 'Black and White':
+      case 'fractal':
         myBG = '/static/img/3d_fractal.gif';
         break;
-      case 'Neo Tokyo':
+      case 'neo':
         myBG = '/static/img/circuit.gif';
         break;
-      case 'Mecha':
+      case 'trip':
         myBG = '/static/img/space_cartoon.gif';
         break;
       default:
