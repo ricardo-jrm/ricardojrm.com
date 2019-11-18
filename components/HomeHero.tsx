@@ -163,7 +163,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 </Box>
               </Grid>
               <Grid xs={12} item>
-                <Box pb={3}>
+                <Box pb={{ xs: 3, md: 1, lg: 2, xl: 4 }}>
                   <Typography
                     variant="h4"
                     className={`${classes.subtitle}`}
