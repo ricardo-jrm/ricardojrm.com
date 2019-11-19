@@ -70,4 +70,7 @@ export default {
     fontWeight: 500,
     fontSize: '1.1rem',
   },
+  body2: {
+    fontSize: '0.91rem',
+  },
 };

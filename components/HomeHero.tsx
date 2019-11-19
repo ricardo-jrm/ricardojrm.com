@@ -147,6 +147,9 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
       ovFlow: {
         overflow: 'auto',
         height: '375px',
+        [themeConfig.breakpoints.up('xl')]: {
+          height: '500px',
+        },
       },
       ...globals,
     };
@@ -162,7 +165,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
           <Grid container className={`${classes.container}`} justify="center" alignItems="center">
             <Grid container item xs={12} sm={11} md={10} lg={9} justify="flex-start">
               <Grid xs={12} item>
-                <Box display="inline-block" pt={{ xs: 5 }}>
+                <Box display="inline-block" pt={{ xs: 5, sm: 4, md: 2, lg: 0, xl: 0 }}>
                   <Typography
                     className={`${classes.title} transitions`}
                     color="textPrimary"
@@ -172,7 +175,7 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 </Box>
               </Grid>
               <Grid xs={12} item>
-                <Box pb={{ xs: 3, md: 1, lg: 2, xl: 4 }}>
+                <Box pb={{ xs: 3, sm: 2, md: 2, lg: 2, xl: 2 }}>
                   <Typography
                     variant="h4"
                     className={`${classes.subtitle} transitions`}
