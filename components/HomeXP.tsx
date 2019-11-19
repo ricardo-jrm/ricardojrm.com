@@ -212,7 +212,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
               Science4you
             </Typography>
             <Typography className="transitions" color="textPrimary" variant="body1">
-              Backend Developer: Java + MySQL
+              Java Developer
             </Typography>
           </Box>
         </Box>
@@ -232,9 +232,9 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
               experience and was very fortunate to find such an awesome environment where I got to
               meet great people that I learned from and helped me ease into the team workflow,
               especially my boss Hugo Morais who dedicated an entire day to teach me Git himself,
-              continued to teach me about web technologies (such as all the inworkings of Apache,
-              PHP, and MySQL) and even advanced concepts like regular expressions. This was the
-              experience that influenced me to pursue development as a career and built my work
+              continued to teach me about web technologies (such as all the inner workings of
+              Apache, PHP, and MySQL) and even advanced concepts like regular expressions. This was
+              the experience that influenced me to pursue development as a career and built my work
               environment values, that I carry in hopes of making my fellow team members feel the
               same way I did when I first started.
             </Typography>
