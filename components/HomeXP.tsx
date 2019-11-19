@@ -73,7 +73,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             </Typography>
           </Box>
         </Box>
-        <Box pt={0.75} pb={1.25}>
+        <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
             blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
@@ -110,7 +110,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             </Typography>
           </Box>
         </Box>
-        <Box pt={0.75} pb={1.25}>
+        <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
             blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
@@ -142,7 +142,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             </Typography>
           </Box>
         </Box>
-        <Box pt={0.75} pb={1.25}>
+        <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
             blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
@@ -179,7 +179,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             </Typography>
           </Box>
         </Box>
-        <Box pt={0.75} pb={1.25}>
+        <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
             blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
@@ -216,11 +216,34 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             </Typography>
           </Box>
         </Box>
-        <Box pt={0.75} pb={1.25}>
+        <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
-            blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
-            sapiente modi dignissimos consequuntur tempora ab consectetur quaerat amet?
+            <span style={{ paddingLeft: '32px' }} />
+            Created a backend management system for Science4you&apos;s online store using Java and
+            MySQL. What started out as a simple display and printing tool, to aid the people in the
+            backend department deal with a high volume of sales the company was experiencing with
+            its growth, soon evolved into a whole application. This app was able to manage and
+            control the online store&apos;s orders, print detailed reports and send automated emails
+            to the customer, all of which were previously handled by hand.
+          </Typography>
+          <Box py={0.75}>
+            <Typography className="transitions" color="textPrimary" variant="body2">
+              <span style={{ paddingLeft: '32px' }} />I was still a greenthorn with no professional
+              experience and was very fortunate to find such an awesome environment where I got to
+              meet great people that I learned from and helped me ease into the team workflow,
+              especially my boss Hugo Morais who dedicated an entire day to teach me Git himself,
+              continued to teach me about web technologies (such as all the inworkings of Apache,
+              PHP, and MySQL) and even advanced concepts like regular expressions. This was the
+              experience that influenced me to pursue development as a career and built my work
+              environment values, that I carry in hopes of making my fellow team members feel the
+              same way I did when I first started.
+            </Typography>
+          </Box>
+          <Typography className="transitions" color="textPrimary" variant="body2">
+            <span style={{ paddingLeft: '32px' }} />
+            Eventually moved on seeking more web focused projects, specifically in Javascript which
+            I was falling for harder every day as I learned it, and proportionally hating Java more
+            and more which was my main language and the codebase I was working on at the time.
           </Typography>
         </Box>
       </Box>
