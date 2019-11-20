@@ -71,6 +71,6 @@ export default {
     fontSize: '1.1rem',
   },
   body2: {
-    fontSize: '0.91rem',
+    fontSize: '0.97rem',
   },
 };
