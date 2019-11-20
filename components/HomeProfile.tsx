@@ -38,40 +38,86 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
           ? theme.palette.secondary.light
           : theme.palette.secondary.dark,
     },
+    subtitle: {
+      color:
+        theme.palette.type === 'dark' ? theme.palette.primary.dark : theme.palette.primary.light,
+      backgroundColor:
+        theme.palette.type === 'dark'
+          ? theme.palette.secondary.light
+          : theme.palette.secondary.dark,
+      display: 'inline-block',
+      // paddingTop: theme.spacing(0.5),
+      // paddingBottom: theme.spacing(0.5),
+      paddingLeft: theme.spacing(4),
+      paddingRight: theme.spacing(4),
+    },
   }));
   const classes = useStyles();
   const pathLogo = dark ? 'logo-i' : 'logo';
   return (
     <Grid container>
       <Grid item xs={12}>
-        <Typography className="transitions" color="textPrimary" variant="body1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto adipisci temporibus
-          cupiditate amet, nemo odit animi rerum alias, ipsa, ex expedita voluptates placeat
-          voluptatem repellat dolorem aliquam labore ipsam vitae!
-        </Typography>
+        <Box pb={2}>
+          <Typography className="transitions" color="textPrimary" variant="body2">
+            <span style={{ paddingLeft: '32px' }} />
+            React developer looking for a full-time remote position, where I can apply my 6 years of
+            agile web development experience to boost the growth and productivity of your company.
+            Not only am I able to work with cutting edge frontend technologies (React.js, Next.js,
+            Material-UI, Typescript), but am also open to teach, mentor and lead any team willing to
+            learn about them.
+          </Typography>
+        </Box>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Box py={0.75}>
-          <Typography className="transitions" color="textPrimary" variant="body2">
-            <i className={`fas fa-chevron-right ${classes.detail}`} />
+        <Box
+          display="flex"
+          className={`${classes.profBox}`}
+          alignItems="center"
+          justifyContent="center">
+          <Typography
+            className={`${classes.subtitle} transitions`}
+            color="textPrimary"
+            variant="body1">
+            {/* <i className={`fas fa-chevron-right ${classes.detail}`} /> */}
             Senior frontend developer
           </Typography>
         </Box>
-        <Box py={0.75}>
-          <Typography className="transitions" color="textPrimary" variant="body2">
-            <i className={`fas fa-chevron-right ${classes.detail}`} />
+        <Box
+          display="flex"
+          className={`${classes.profBox}`}
+          alignItems="center"
+          justifyContent="center">
+          <Typography
+            className={`${classes.subtitle} transitions`}
+            color="textPrimary"
+            variant="body1">
+            {/* <i className={`fas fa-chevron-right ${classes.detail}`} /> */}
             Near Lisbon, Portugal
           </Typography>
         </Box>
-        <Box py={0.75}>
-          <Typography className="transitions" color="textPrimary" variant="body2">
-            <i className={`fas fa-chevron-right ${classes.detail}`} />
+        <Box
+          display="flex"
+          className={`${classes.profBox}`}
+          alignItems="center"
+          justifyContent="center">
+          <Typography
+            className={`${classes.subtitle} transitions`}
+            color="textPrimary"
+            variant="body1">
+            {/* <i className={`fas fa-chevron-right ${classes.detail}`} /> */}
             Full-time & full remote
           </Typography>
         </Box>
-        <Box py={0.75} pb={2}>
-          <Typography className="transitions" color="textPrimary" variant="body2">
-            <i className={`fas fa-chevron-right ${classes.detail}`} />
+        <Box
+          display="flex"
+          className={`${classes.profBox}`}
+          alignItems="center"
+          justifyContent="center">
+          <Typography
+            className={`${classes.subtitle} transitions`}
+            color="textPrimary"
+            variant="body1">
+            {/* <i className={`fas fa-chevron-right ${classes.detail}`} /> */}
             Looking for challenging projects
           </Typography>
         </Box>
@@ -94,7 +140,7 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
             </Link>
           </Box>
           <Box display="inline-block">
-            <Typography className="transitions" color="textPrimary" variant="body2">
+            <Typography className="transitions" color="textPrimary" variant="body1">
               React.js (3+ years)
             </Typography>
           </Box>
@@ -117,31 +163,8 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
             </Link>
           </Box>
           <Box display="inline-block">
-            <Typography className="transitions" color="textPrimary" variant="body2">
+            <Typography className="transitions" color="textPrimary" variant="body1">
               Next.js
-            </Typography>
-          </Box>
-        </Box>
-
-        <Box display="flex" className={`${classes.profBox}`} alignItems="center">
-          <Box display="inline-block">
-            <Link
-              href="https://www.typescriptlang.org/"
-              title="Typescript"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit">
-              <img
-                className={`${classes.profIcon}`}
-                src="/static/img/typescript-logo.png"
-                title="Typescript"
-                alt="Typescript logo"
-              />
-            </Link>
-          </Box>
-          <Box display="inline-block">
-            <Typography className="transitions" color="textPrimary" variant="body2">
-              Typescript
             </Typography>
           </Box>
         </Box>
@@ -163,8 +186,31 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
             </Link>
           </Box>
           <Box display="inline-block">
-            <Typography className="transitions" color="textPrimary" variant="body2">
+            <Typography className="transitions" color="textPrimary" variant="body1">
               Material-UI
+            </Typography>
+          </Box>
+        </Box>
+
+        <Box display="flex" className={`${classes.profBox}`} alignItems="center">
+          <Box display="inline-block">
+            <Link
+              href="https://www.typescriptlang.org/"
+              title="Typescript"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="inherit">
+              <img
+                className={`${classes.profIcon}`}
+                src="/static/img/typescript-logo.png"
+                title="Typescript"
+                alt="Typescript logo"
+              />
+            </Link>
+          </Box>
+          <Box display="inline-block">
+            <Typography className="transitions" color="textPrimary" variant="body1">
+              Typescript
             </Typography>
           </Box>
         </Box>

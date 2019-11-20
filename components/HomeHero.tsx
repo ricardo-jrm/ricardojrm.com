@@ -13,9 +13,7 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 
 import ThemePopover from 'components/ThemePopover';
-import HomeAbout from 'components/HomeAbout';
 import HomeProfile from 'components/HomeProfile';
-import HomeHire from 'components/HomeHire';
 import HomeXP from 'components/HomeXP';
 import HomeSkills from 'components/HomeSkills';
 
@@ -286,68 +284,6 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                     className="animated fadeIn">
                     <HomeSkills dark={darkToggle.checked} />
                   </Box>
-
-                  <Box display="none">
-                    <ButtonGroup fullWidth>
-                      <Button onClick={() => setMenu(2)} className={`${classes.button}`}>
-                        <Typography
-                          className={`transitions ${classes.crsPointer}`}
-                          variant="h5"
-                          component="h3">
-                          <span
-                            className={
-                              menu === 2
-                                ? `transitions ${classes.details}`
-                                : `transitions ${classes.details} ${classes.vHidden}`
-                            }>
-                            {'<'}
-                          </span>
-                          {menu === 2 ? 'ForHire' : 'For Hire'}
-                          <span
-                            className={
-                              menu === 2
-                                ? `transitions ${classes.details}`
-                                : `transitions ${classes.details} ${classes.vHidden}`
-                            }>
-                            {' />'}
-                          </span>
-                        </Typography>
-                      </Button>
-                    </ButtonGroup>
-                    <Box
-                      pt={1}
-                      pb={4}
-                      display={{ xs: menu === 2 ? 'block' : 'none', md: 'none' }}
-                      className="animated fadeIn">
-                      <HomeHire />
-                    </Box>
-                    <ButtonGroup fullWidth>
-                      <Button onClick={() => setMenu(0)} className={classes.button}>
-                        <Typography
-                          className={`transitions ${classes.crsPointer}`}
-                          variant="h5"
-                          component="h3">
-                          <span
-                            className={
-                              menu === 0
-                                ? `transitions ${classes.details}`
-                                : `transitions ${classes.details} ${classes.vHidden}`
-                            }>
-                            {'<'}
-                          </span>
-                          About
-                          <span
-                            className={
-                              menu === 0
-                                ? `transitions ${classes.details}`
-                                : `transitions ${classes.details} ${classes.vHidden}`
-                            }>
-                            {' />'}
-                          </span>
-                        </Typography>
-                      </Button>
-                    </ButtonGroup>
-                  </Box>
                 </Box>
                 <Box textAlign="center">
                   <Box display="inline-block">
@@ -391,14 +327,8 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
               </Grid>
               <Grid xs={12} md={9} lg={8} item>
                 <Box className={classes.ovFlow} display={{ xs: 'none', md: 'block' }} p={2}>
-                  <Box display={menu === 0 ? 'block' : 'none'} className="animated fadeIn">
-                    <HomeAbout />
-                  </Box>
                   <Box display={menu === 1 ? 'block' : 'none'} className="animated fadeIn">
                     <HomeProfile dark={darkToggle.checked} theme={themeConfig} />
-                  </Box>
-                  <Box display={menu === 2 ? 'block' : 'none'} className="animated fadeIn">
-                    <HomeHire />
                   </Box>
                   <Box display={menu === 3 ? 'block' : 'none'} className="animated fadeIn">
                     <HomeXP dark={darkToggle.checked} theme={themeConfig} />
