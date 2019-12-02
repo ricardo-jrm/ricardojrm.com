@@ -18,14 +18,14 @@ import HomeXP from 'components/HomeXP';
 import HomeSkills from 'components/HomeSkills';
 
 const defaultTheme = {
-  name: 'trip',
-  config: mecha,
+  name: 'fractal',
+  config: bwsepia,
   type: 'dark',
 };
 const myThemes = [
+  ['fractal', bwsepia, 'Fractal'],
   ['trip', mecha, 'Voyage'],
   ['liquid', liquid, 'Cooldown'],
-  ['fractal', bwsepia, 'Fractal'],
   ['neo', neo, 'Circuit'],
   ['boom', boom, 'Fission'],
 ];
