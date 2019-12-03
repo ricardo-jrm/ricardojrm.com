@@ -139,20 +139,27 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
               Freelancer
             </Typography>
             <Typography className="transitions" color="textPrimary" variant="body1">
-              Mobile Developer: React Native + libsignal-protocol
+              Mobile Developer (React Native)
             </Typography>
           </Box>
         </Box>
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            Created multiple websites websites and apps as a freelancer, with the most notable being
-            a mobile app called Sycret.ink{' '}
+            <span style={{ paddingLeft: '32px' }} />
+            During this time I was aiming to sharpen my React skills and explore mobile development,
+            so I created multiple websites and apps as a freelancer using React Native. The most
+            notable being a mobile app called Sycret.ink{' '}
             <img
               src="/static/img/sycretink-logo.png"
               className={classes.textIcon}
               title="Sycret.ink"
               alt="Sycret.ink Logo"
             />{' '}
+            which was basically a Signal clone (mobile chat app with end to end encryption) with
+            extra features to be developed internally for a private company, it took a team of 3
+            people (AWS Engineer / Lead, Backend specialist, Mobile Developer) and I learned a lot
+            about end to end encryption protocols and mobile app deployment / version control from
+            it.
           </Typography>
         </Box>
         <Box display="flex" alignItems="center" pt={2}>
