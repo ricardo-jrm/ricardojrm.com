@@ -25,9 +25,14 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         | '-moz-none'
         | 'element'
         | undefined,
+      cursor: 'pointer',
     },
     xpWrap: {
       marginRight: theme.spacing(1.2),
+    },
+    textIcon: {
+      maxHeight: theme.typography.body2.fontSize,
+      width: 'auto',
     },
     label: {
       paddingLeft: theme.spacing(4),
@@ -50,19 +55,12 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
           <Box className={`${classes.xpWrap}`} pt={0.75} display="inline-block">
-            <Link
-              href="https://glaiveware.com/"
-              title="Glaiveware"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit">
-              <img
-                className={`${classes.xpImg}`}
-                src={`static/img/glaiveware-${pathLogo}.png`}
-                title="Glaiveware"
-                alt="Glaiveware logo"
-              />
-            </Link>
+            <img
+              className={`${classes.xpImg}`}
+              src={`static/img/ricardojrm-${pathLogo}.png`}
+              title="RicardoJRM"
+              alt="RicardoJRM logo"
+            />
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="h6">
@@ -147,9 +145,14 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
-            blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
-            sapiente modi dignissimos consequuntur tempora ab consectetur quaerat amet?
+            Created multiple websites websites and apps as a freelancer, with the most notable being
+            a mobile app called Sycret.ink{' '}
+            <img
+              src="/static/img/sycretink-logo.png"
+              className={classes.textIcon}
+              title="Sycret.ink"
+              alt="Sycret.ink Logo"
+            />{' '}
           </Typography>
         </Box>
         <Box display="flex" alignItems="center" pt={2}>
@@ -173,7 +176,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
               American Heart Association
             </Typography>
             <Typography className="transitions" color="textPrimary" variant="body1">
-              React Developer - React dashboard
+              Full Stack Javascript Developer
             </Typography>
           </Box>
         </Box>
