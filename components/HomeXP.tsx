@@ -239,8 +239,8 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             <Typography className="transitions" color="textPrimary" variant="body2">
               <span style={{ paddingLeft: '32px' }} />
               This was the place where I grew the most as a web developer, as I was first hired with
-              little JQuery and Bootstrap experience and one year later was leading the team using
-              Angular.js ...
+              little JQuery and Bootstrap experience and a few months later was leading the team
+              using Angular.js (...)
             </Typography>
           </Box>
           <Typography className="transitions" color="textPrimary" variant="body2">
