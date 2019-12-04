@@ -229,21 +229,23 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
             Created multiple analytics dashboards, reporting, auditing and management tools for
-            NextBitt&apos;s Asset & Facility Management Software as a Junior Frontend Developer
-            using Angular.js and C# in a .NET MVC environment.
+            NextBitt&apos;s Asset & Facility Management Software as a Frontend Developer using
+            Angular.js and C# in a .NET MVC environment.
           </Typography>
-          <Box py={0.75}>
+          <Box display="none">
+            <Box py={0.75}>
+              <Typography className="transitions" color="textPrimary" variant="body2">
+                This was the place where I grew the most as a web developer, as I was first hired
+                with little JQuery and Bootstrap experience and a few months later was leading the
+                team using Angular.js (...)
+              </Typography>
+            </Box>
             <Typography className="transitions" color="textPrimary" variant="body2">
-              This was the place where I grew the most as a web developer, as I was first hired with
-              little JQuery and Bootstrap experience and a few months later was leading the team
-              using Angular.js (...)
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
+              blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
+              sapiente modi dignissimos consequuntur tempora ab consectetur quaerat amet?
             </Typography>
           </Box>
-          <Typography className="transitions" color="textPrimary" variant="body2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
-            blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
-            sapiente modi dignissimos consequuntur tempora ab consectetur quaerat amet?
-          </Typography>
         </Box>
       </Box>
       <Box py={2}>
@@ -284,24 +286,27 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             control the online store&apos;s orders, print detailed reports and send automated emails
             to the customer, all of which were previously handled by hand.
           </Typography>
-          <Box py={0.75}>
+          <Box display="none">
+            <Box py={0.75}>
+              <Typography className="transitions" color="textPrimary" variant="body2">
+                I was still a greenthorn with no professional experience and was very fortunate to
+                find such an awesome environment where I got to meet great people that I learned
+                from and helped me ease into the team workflow, especially my boss Hugo Morais who
+                dedicated an entire day to teach me Git himself, continued to teach me about web
+                technologies (such as all the inner workings of Apache, PHP, and MySQL) and even
+                advanced concepts like regular expressions. This was the experience that influenced
+                me to pursue development as a career and built my work environment values, that I
+                carry in hopes of making my fellow team members feel the same way I did when I first
+                started.
+              </Typography>
+            </Box>
             <Typography className="transitions" color="textPrimary" variant="body2">
-              I was still a greenthorn with no professional experience and was very fortunate to
-              find such an awesome environment where I got to meet great people that I learned from
-              and helped me ease into the team workflow, especially my boss Hugo Morais who
-              dedicated an entire day to teach me Git himself, continued to teach me about web
-              technologies (such as all the inner workings of Apache, PHP, and MySQL) and even
-              advanced concepts like regular expressions. This was the experience that influenced me
-              to pursue development as a career and built my work environment values, that I carry
-              in hopes of making my fellow team members feel the same way I did when I first
-              started.
+              Eventually moved on seeking more web focused projects, specifically in Javascript
+              which I was falling for harder every day as I learned it, and proportionally hating
+              Java more and more which was my main language and the codebase I was working on at the
+              time.
             </Typography>
           </Box>
-          <Typography className="transitions" color="textPrimary" variant="body2">
-            Eventually moved on seeking more web focused projects, specifically in Javascript which
-            I was falling for harder every day as I learned it, and proportionally hating Java more
-            and more which was my main language and the codebase I was working on at the time.
-          </Typography>
         </Box>
       </Box>
     </Box>

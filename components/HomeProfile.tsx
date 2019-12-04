@@ -61,9 +61,10 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
           <Typography className="transitions" color="textPrimary" variant="body2">
             React developer looking for a full-time remote position, where I can work on challenging
             projects and apply my agile web development experience to boost the growth and
-            productivity of your company. Not only am I able to work with cutting edge frontend
+            productivity of your company.{' '}
+            {/* Not only am I able to work with cutting edge frontend
             technologies (React.js, Next.js, Material-UI, Typescript), but am also open to teach,
-            mentor and lead any team willing to learn about them.
+            mentor and lead any team willing to learn about them. */}
           </Typography>
         </Box>
       </Grid>
