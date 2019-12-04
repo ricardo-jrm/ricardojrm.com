@@ -59,7 +59,6 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
       <Grid item xs={12}>
         <Box pb={2}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            <span style={{ paddingLeft: '32px' }} />
             React developer looking for a full-time remote position, where I can work on challenging
             projects and apply my agile web development experience to boost the growth and
             productivity of your company. Not only am I able to work with cutting edge frontend

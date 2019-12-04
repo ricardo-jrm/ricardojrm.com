@@ -72,5 +72,7 @@ export default {
   },
   body2: {
     fontSize: '0.97rem',
+    lineHeight: '1.7rem',
+    letterSpacing: '0.5px',
   },
 };

@@ -71,7 +71,7 @@ const HomeSkills = ({ dark }: IHomeSkillsProps): any => {
       <Grid container>
         {skills.map((skill) => {
           return (
-            <Grid item xs={6} sm={4} md={3} key={skill[0]}>
+            <Grid item xs={6} sm={4} md={4} lg={4} xl={3} key={skill[0]}>
               <Box display="flex" className={`${classes.skillBox}`} alignItems="center">
                 <Box display="inline-block">
                   <img

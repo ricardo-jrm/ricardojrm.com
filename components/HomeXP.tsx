@@ -145,7 +145,6 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            <span style={{ paddingLeft: '32px' }} />
             During this time I was aiming to sharpen my React skills and explore mobile development,
             so I created multiple websites and apps as a freelancer using React Native. The most
             notable being a mobile app called Sycret.ink{' '}
@@ -155,11 +154,11 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
               title="Sycret.ink"
               alt="Sycret.ink Logo"
             />{' '}
-            which was basically a Signal clone (mobile chat app with end to end encryption) with
-            extra features to be developed internally for a private company, it took a team of 3
-            people (AWS Engineer / Lead, Backend specialist, Mobile Developer) and I learned a lot
-            about end to end encryption protocols and mobile app deployment / version control from
-            it.
+            which was basically a Signal clone (mobile chat app with end to end encryption in a
+            serverless environment) with extra features to be developed internally for a private
+            company, it took a team of 3 people (AWS Engineer / Lead, Backend specialist, Mobile
+            Developer) and I learned a lot about end to end encryption protocols and mobile app
+            deployment / version control from it.
           </Typography>
         </Box>
         <Box display="flex" alignItems="center" pt={2}>
@@ -189,7 +188,6 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            <span style={{ paddingLeft: '32px' }} />
             Created an admin dashboard to control American Heart Association&apos;s Kinect
             Integration that interfaced the users with the data collected, connected doctors and
             their pacients, printed out reports and allowed superusers to manage the whole system.
@@ -230,21 +228,18 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            <span style={{ paddingLeft: '32px' }} />
             Created multiple analytics dashboards, reporting, auditing and management tools for
             NextBitt&apos;s Asset & Facility Management Software as a Junior Frontend Developer
             using Angular.js and C# in a .NET MVC environment.
           </Typography>
           <Box py={0.75}>
             <Typography className="transitions" color="textPrimary" variant="body2">
-              <span style={{ paddingLeft: '32px' }} />
               This was the place where I grew the most as a web developer, as I was first hired with
               little JQuery and Bootstrap experience and a few months later was leading the team
               using Angular.js (...)
             </Typography>
           </Box>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            <span style={{ paddingLeft: '32px' }} />
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
             blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
             sapiente modi dignissimos consequuntur tempora ab consectetur quaerat amet?
@@ -282,7 +277,6 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            <span style={{ paddingLeft: '32px' }} />
             Created a backend management system for Science4you&apos;s online store using Java and
             MySQL. What started out as a simple display and printing tool, to aid the people in the
             backend department deal with a high volume of sales the company was experiencing with
@@ -292,19 +286,18 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
           </Typography>
           <Box py={0.75}>
             <Typography className="transitions" color="textPrimary" variant="body2">
-              <span style={{ paddingLeft: '32px' }} />I was still a greenthorn with no professional
-              experience and was very fortunate to find such an awesome environment where I got to
-              meet great people that I learned from and helped me ease into the team workflow,
-              especially my boss Hugo Morais who dedicated an entire day to teach me Git himself,
-              continued to teach me about web technologies (such as all the inner workings of
-              Apache, PHP, and MySQL) and even advanced concepts like regular expressions. This was
-              the experience that influenced me to pursue development as a career and built my work
-              environment values, that I carry in hopes of making my fellow team members feel the
-              same way I did when I first started.
+              I was still a greenthorn with no professional experience and was very fortunate to
+              find such an awesome environment where I got to meet great people that I learned from
+              and helped me ease into the team workflow, especially my boss Hugo Morais who
+              dedicated an entire day to teach me Git himself, continued to teach me about web
+              technologies (such as all the inner workings of Apache, PHP, and MySQL) and even
+              advanced concepts like regular expressions. This was the experience that influenced me
+              to pursue development as a career and built my work environment values, that I carry
+              in hopes of making my fellow team members feel the same way I did when I first
+              started.
             </Typography>
           </Box>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            <span style={{ paddingLeft: '32px' }} />
             Eventually moved on seeking more web focused projects, specifically in Javascript which
             I was falling for harder every day as I learned it, and proportionally hating Java more
             and more which was my main language and the codebase I was working on at the time.
