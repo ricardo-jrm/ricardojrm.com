@@ -9,11 +9,14 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
           <meta httpEquiv="Content-Language" content="en" />
           <meta name="language" content="en" />
           <meta name="generator" content="RicardoJRM (www.ricardojrm.com)" />
           <meta name="author" content="RicardoJRM (www.ricardojrm.com)" />
           <meta name="reference" content="RicardoJRM" />
+
+          <meta name="date" content="2019-12-05" />
 
           <meta name="robots" content="index,follow" />
           {/* <link rel="manifest" href="/manifest.json" /> */}
@@ -29,7 +32,7 @@ class MyDocument extends Document {
           <link rel="dns-prefetch" href="https://www.googletagmanager.com" /> */}
 
           {/* PWA primary color */}
-          <meta name="theme-color" content="#807CAE" />
+          <meta name="theme-color" content="#c0c0c0" />
 
           <meta
             name="viewport"
