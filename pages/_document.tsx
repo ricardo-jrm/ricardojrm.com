@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <meta name="date" content="2019-12-05" />
 
           <meta name="robots" content="index,follow" />
-          {/* <link rel="manifest" href="/manifest.json" /> */}
+          <link rel="manifest" href="/manifest.json" />
 
           <link rel="canonical" href="https://www.ricardojrm.com" />
 

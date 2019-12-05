@@ -16,10 +16,7 @@ const PageMeta = ({  }: IPageMetaProps): any => {
 
       {/* Open Graph */}
 
-      <meta
-        property="og:description"
-        content="React Developer with a manbun"
-      />
+      <meta property="og:description" content="React Developer with a manbun" />
       {/* <meta
         property="og:image:secure_url"
         content="https://www.kfitnessstudio.com/static/openg/kfitness-openg.png"
@@ -33,7 +30,6 @@ const PageMeta = ({  }: IPageMetaProps): any => {
       <meta property="og:title" content="RicardoJRM" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.ricardojrm.com" />
-
 
       {/* Microsoft */}
 
@@ -52,24 +48,22 @@ const PageMeta = ({  }: IPageMetaProps): any => {
         content="/static/img/ricardojrm-icon-310.png"
       /> */}
 
-
       {/* Apple */}
 
       <meta name="apple-mobile-web-app-title" content="RicardoJRM" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-touch-fullscreen" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      
-      <link rel="apple-touch-icon" sizes="57x57" href="/static/img/ricardojrm-icon-57.png" />
-      <link rel="apple-touch-icon" sizes="60x60" href="/static/img/ricardojrm-icon-60.png" />
-      <link rel="apple-touch-icon" sizes="72x72" href="/static/img/ricardojrm-icon-72.png" />
-      <link rel="apple-touch-icon" sizes="76x76" href="/static/img/ricardojrm-icon-76.png" />
+
+      <link rel="apple-touch-icon" sizes="57x57" href="/static/img/ricardojrm-icon-057.png" />
+      <link rel="apple-touch-icon" sizes="60x60" href="/static/img/ricardojrm-icon-060.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="/static/img/ricardojrm-icon-072.png" />
+      <link rel="apple-touch-icon" sizes="76x76" href="/static/img/ricardojrm-icon-076.png" />
       <link rel="apple-touch-icon" sizes="114x114" href="/static/img/ricardojrm-icon-114.png" />
       <link rel="apple-touch-icon" sizes="120x120" href="/static/img/ricardojrm-icon-120.png" />
       <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ricardojrm-icon-144.png" />
       <link rel="apple-touch-icon" sizes="152x152" href="/static/img/ricardojrm-icon-152.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/static/img/ricardojrm-icon-180.png" />
-
 
       {/* Web */}
 
@@ -105,18 +99,13 @@ const PageMeta = ({  }: IPageMetaProps): any => {
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="RicardoJRM" />
-      <meta
-        name="twitter:description"
-        content="React Developer with a manbun."
-      />
+      <meta name="twitter:description" content="React Developer with a manbun." />
       <meta name="twitter:site" content="@ricardojrm7" />
       {/* <meta
         name="twitter:image"
         content="https://www.glaiveware.com/static/meta/openg/en/glaiveware-openg-websites.png"
       /> */}
       <meta name="twitter:creator" content="@ricardojrm7" />
-      
-      
     </Head>
   );
 };
