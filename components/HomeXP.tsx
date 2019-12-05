@@ -108,9 +108,27 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
-            blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
-            sapiente modi dignissimos consequuntur tempora ab consectetur quaerat amet?
+            A great learning experience that made me grow as a developer, taught me how to manage
+            projects and run a business that created bespoke web apps above market standards.
+          </Typography>
+          <Typography className="transitions" color="textPrimary" variant="body2">
+            - HTML5 + CSS3 (Bootstrap 4)
+            <br />
+            - JavaScript (React.js, Redux, Redux-Saga, Node.js, Express.js, Helmet.js, Webpack 4,
+            Babel)
+            <br />
+            - Database (Firebase, MySQL)
+            <br />
+            - Ubuntu (nginx)
+            <br />
+            - AWS (EC2, SES)
+            <br />
+            - SEO & SEM
+            <br />
+            - Branding & Design
+            <br />
+            - Marketing & Advertising
+            <br />- Copywriting & Content Management
           </Typography>
         </Box>
       </Box>
@@ -146,8 +164,8 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
             During this time I was aiming to sharpen my React skills and explore mobile development,
-            so I created multiple websites and apps as a freelancer using React Native. The most
-            notable being a mobile app called Sycret.ink{' '}
+            so I created multiple apps as a freelancer using React Native. The most notable being a
+            mobile app called Sycret.ink{' '}
             <img
               src="/static/img/sycretink-logo.png"
               className={classes.textIcon}
@@ -171,7 +189,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
               color="inherit">
               <img
                 className={`${classes.xpImg}`}
-                src="/static/img/aha-logo.png"
+                src="/static/img/aha.png"
                 title="American Heart Association"
                 alt="American Heart Association logo"
               />
@@ -230,7 +248,153 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
           <Typography className="transitions" color="textPrimary" variant="body2">
             Created multiple analytics dashboards, reporting, auditing and management tools for
             NextBitt&apos;s Asset & Facility Management Software as a Frontend Developer using
-            Angular.js and C# in a .NET MVC environment.
+            Angular.js and C# in a .NET MVC environment that was very intensive when it came to Date
+            / Time logic and Data Visualization.
+          </Typography>
+          <Typography className="transitions" color="textPrimary" variant="body2">
+            - HTML5 + CSS3 (Bootstrap 3)
+            <br />
+            - Javascript (JQuery, Angular.js)
+            <br />
+            - .NET (C#, MVC)
+            <br />- Date / Time logic (
+            <Link
+              href="https://momentjs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Moment.js
+            </Link>
+            ,{' '}
+            <Link
+              href="https://bootstrap-datepicker.readthedocs.io/en/stable/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Date Picker
+            </Link>
+            ,{' '}
+            <Link
+              href="http://www.daterangepicker.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Date Range Picker
+            </Link>
+            )
+            <br />- Data Visualization (
+            <Link
+              href="https://developers.google.com/chart/interactive/docs/gallery"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Google Charts
+            </Link>
+            ,{' '}
+            <Link
+              href="http://dygraphs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              dygraphs
+            </Link>
+            ,{' '}
+            <Link
+              href="http://www.flotcharts.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              flotcharts
+            </Link>
+            ,{' '}
+            <Link
+              href="https://www.chartjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Chart.js
+            </Link>
+            ,{' '}
+            <Link
+              href="https://gionkunz.github.io/chartist-js/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Chartist.js
+            </Link>
+            ,{' '}
+            <Link
+              href="https://d3js.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              d3.js
+            </Link>
+            ,{' '}
+            <Link
+              href="https://c3js.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              C3.js
+            </Link>
+            ,{' '}
+            <Link
+              href="https://github.hubspot.com/pace/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Pace.js
+            </Link>
+            ,{' '}
+            <Link
+              href="https://benpickles.github.io/peity/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Peity
+            </Link>
+            ,{' '}
+            <Link
+              href="https://omnipotent.net/jquery.sparkline/#s-about"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Sparklines
+            </Link>
+            ,{' '}
+            <Link
+              href="https://github.com/rendro/easy-pie-chart"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Easy Pie Charts
+            </Link>
+            ,{' '}
+            <Link
+              href="https://www.datatables.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Datatables
+            </Link>
+            ,{' '}
+            <Link
+              href="https://itsjavi.com/bootstrap-colorpicker/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Color Picker
+            </Link>
+            ,{' '}
+            <Link
+              href="http://ionden.com/a/plugins/ion.rangeSlider/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="textPrimary">
+              Ion.RangeSlider
+            </Link>
+            )
           </Typography>
           <Box display="none">
             <Box py={0.75}>
@@ -281,7 +445,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
           <Typography className="transitions" color="textPrimary" variant="body2">
             Created a backend management system for Science4you&apos;s online store using Java and
             MySQL. What started out as a simple display and printing tool, to aid the people in the
-            backend department deal with a high volume of sales the company was experiencing with
+            backend department deal with the high volume of sales the company was experiencing with
             its growth, soon evolved into a whole application. This app was able to manage and
             control the online store&apos;s orders, print detailed reports and send automated emails
             to the customer, all of which were previously handled by hand.

@@ -60,8 +60,8 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
         <Box pb={2}>
           <Typography className="transitions" color="textPrimary" variant="body2">
             React developer looking for a full-time remote position, where I can work on challenging
-            projects and apply my agile web development experience to boost the growth and
-            productivity of your company.{' '}
+            projects and apply my agile web development experience to contribute to the the growth
+            and productivity of your company.{' '}
             {/* Not only am I able to work with cutting edge frontend
             technologies (React.js, Next.js, Material-UI, Typescript), but am also open to teach,
             mentor and lead any team willing to learn about them. */}
@@ -92,19 +92,6 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
             color="textPrimary"
             variant="body1">
             {/* <i className={`fas fa-chevron-right ${classes.detail}`} /> */}
-            Near Lisbon, Portugal
-          </Typography>
-        </Box>
-        <Box
-          display="flex"
-          className={`${classes.profBox}`}
-          alignItems="center"
-          justifyContent="center">
-          <Typography
-            className={`${classes.subtitle} transitions`}
-            color="textPrimary"
-            variant="body1">
-            {/* <i className={`fas fa-chevron-right ${classes.detail}`} /> */}
             Full-time & full remote
           </Typography>
         </Box>
@@ -119,6 +106,19 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
             variant="body1">
             {/* <i className={`fas fa-chevron-right ${classes.detail}`} /> */}
             Challenging projects
+          </Typography>
+        </Box>
+        <Box
+          display="flex"
+          className={`${classes.profBox}`}
+          alignItems="center"
+          justifyContent="center">
+          <Typography
+            className={`${classes.subtitle} transitions`}
+            color="textPrimary"
+            variant="body1">
+            {/* <i className={`fas fa-chevron-right ${classes.detail}`} /> */}
+            Near Lisbon, Portugal
           </Typography>
         </Box>
       </Grid>

@@ -33,7 +33,7 @@ const bwsepia = {
     secondary: {
       dark: '#263238',
       main: '#607d8b',
-      light: '#cfd8dc',
+      light: '#cfd8dc', // #cfd8dc   #e5e4e2   #c0c0c0
     },
     error: {
       main: '#a22334',
