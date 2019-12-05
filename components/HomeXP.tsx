@@ -73,7 +73,9 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            Currently looking for challenging projects that match my profile, kthxbai.
+            Currently looking for a full-time remote position where I can solely focus on React
+            development, work on challenging projects and apply my agile web development experience
+            to contribute to the the growth and productivity of your company.
           </Typography>
         </Box>
       </Box>
