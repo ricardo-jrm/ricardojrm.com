@@ -44,14 +44,18 @@ const HomeSkills = ({ dark }: IHomeSkillsProps): any => {
     ['Material-UI', '/static/img/materialui-logo.png'],
     ['Next.js', `/static/img/nextjs-${pathLogo}.png`],
     ['Node.js', '/static/img/nodejs-logo.png'],
+    ['Redux', '/static/img/redux-logo.png'],
+    ['Redux Saga', '/static/img/reduxsaga-logo.png'],
     ['Bootstrap', '/static/img/bootstrap-logo.png'],
     ['JQuery', '/static/img/jquery-logo.png'],
     ['Angular', '/static/img/angular-logo.png'],
+    ['.NET MVC', '/static/img/aspmvc-logo.png'],
+    ['C#', '/static/img/csharp-logo.png'],
     ['ECMAscript', '/static/img/ecmascript-logo.png'],
     ['Express.js', '/static/img/express-logo.png'],
     ['Git', `/static/img/git-${pathLogo}.png`],
-    ['React Native', '/static/img/reactnative-logo.png'],
     ['Android Studio', '/static/img/androidstudio-logo.png'],
+    ['React Native', '/static/img/reactnative-logo.png'],
     ['SCRUM', '/static/img/scrum-logo.png'],
     ['Adobe Creative Cloud', '/static/img/adobecc-logo.png'],
     ['Aseprite', '/static/img/aseprite-logo.png'],
@@ -67,7 +71,7 @@ const HomeSkills = ({ dark }: IHomeSkillsProps): any => {
       <Grid container>
         {skills.map((skill) => {
           return (
-            <Grid item xs={3} key={skill[0]}>
+            <Grid item xs={6} sm={4} md={4} lg={4} xl={3} key={skill[0]}>
               <Box display="flex" className={`${classes.skillBox}`} alignItems="center">
                 <Box display="inline-block">
                   <img
@@ -78,7 +82,7 @@ const HomeSkills = ({ dark }: IHomeSkillsProps): any => {
                   />
                 </Box>
                 <Box display="inline-block">
-                  <Typography color="textPrimary" variant="body1">
+                  <Typography className="transitions" color="textPrimary" variant="body1">
                     {skill[0]}
                   </Typography>
                 </Box>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
-import { bwsepia, gold, mecha, boom, neo, liquid, exotic, globals } from 'src/theme';
+import { bwsepia, mecha, boom, neo, liquid, globals } from 'src/theme';
 
 import { hexToRGB } from 'utils/colors';
 
@@ -13,25 +13,21 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 
 import ThemePopover from 'components/ThemePopover';
-import HomeAbout from 'components/HomeAbout';
 import HomeProfile from 'components/HomeProfile';
-import HomeHire from 'components/HomeHire';
 import HomeXP from 'components/HomeXP';
 import HomeSkills from 'components/HomeSkills';
 
 const defaultTheme = {
-  name: 'Mecha',
-  config: mecha,
-  type: 'dark'
-}
+  name: 'fractal',
+  config: bwsepia,
+  type: 'dark',
+};
 const myThemes = [
-  ['Black and White', bwsepia],
-  ['Fools Gold', gold],
-  ['Mecha', mecha],
-  ['Boom', boom],
-  ['Neo Tokyo', neo],
-  ['Liquid', liquid],
-  ['Watermelon', exotic],
+  ['fractal', bwsepia, 'Fractal'],
+  ['trip', mecha, 'Voyage'],
+  ['liquid', liquid, 'Cooldown'],
+  ['neo', neo, 'Circuit'],
+  ['boom', boom, 'Fission'],
 ];
 
 const HomeHero = ({  }: IHomeHeroProps): any => {
@@ -69,16 +65,16 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
     );
     let myBG;
     switch (localTheme) {
-      case 'Boom':
+      case 'boom':
         myBG = '/static/img/red_nrg.gif';
         break;
-      case 'Black and White':
+      case 'fractal':
         myBG = '/static/img/3d_fractal.gif';
         break;
-      case 'Neo Tokyo':
+      case 'neo':
         myBG = '/static/img/circuit.gif';
         break;
-      case 'Mecha':
+      case 'trip':
         myBG = '/static/img/space_cartoon.gif';
         break;
       default:
@@ -101,7 +97,9 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
         backgroundImage: `url(${myBG})`,
       },
       bg: {
-        backgroundColor: `rgb(${bgRGB.r}, ${bgRGB.g}, ${bgRGB.b}, 0.90)`,
+        backgroundColor: `rgb(${bgRGB.r}, ${bgRGB.g}, ${bgRGB.b}, ${
+          themeConfig.palette.type === 'dark' ? '0.90' : '0.90'
+        })`,
       },
       title: {
         // textStroke: `1px ${theme.palette.secondary.main}`,
@@ -114,8 +112,17 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
       subtitle: {
         color:
           themeConfig.palette.type === 'dark'
+            ? themeConfig.palette.primary.dark
+            : themeConfig.palette.primary.light,
+        backgroundColor:
+          themeConfig.palette.type === 'dark'
             ? themeConfig.palette.secondary.light
             : themeConfig.palette.secondary.dark,
+        display: 'inline-block',
+        // paddingTop: themeConfig.spacing(0.5),
+        // paddingBottom: themeConfig.spacing(0.5),
+        paddingLeft: themeConfig.spacing(4),
+        paddingRight: themeConfig.spacing(4),
       },
       link: {
         color:
@@ -137,33 +144,39 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
       },
       ovFlow: {
         overflow: 'auto',
-        maxHeight: '45vh',
+        height: '375px',
+        [themeConfig.breakpoints.up('xl')]: {
+          height: '500px',
+        },
       },
       ...globals,
     };
   });
   const classes = useStyles();
 
-  const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
+  // const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 
   return (
     <ThemeProvider theme={themeConfig}>
-      <div className={`${classes.gifBG} bg-fixed`}>
-        <div className={`${classes.root} ${classes.bg}`}>
+      <div className={`transitions ${classes.gifBG} bg-fixed`}>
+        <div className={`transitions ${classes.root} ${classes.bg}`}>
           <Grid container className={`${classes.container}`} justify="center" alignItems="center">
             <Grid container item xs={12} sm={11} md={10} lg={9} justify="flex-start">
               <Grid xs={12} item>
-                <Box display="inline-block">
-                  <Typography className={`${classes.title}`} color="textPrimary" variant="h1">
+                <Box display="inline-block" pt={{ xs: 5, sm: 4, md: 2, lg: 0, xl: 0 }}>
+                  <Typography
+                    className={`${classes.title} transitions`}
+                    color="textPrimary"
+                    variant="h1">
                     RicardoJRM
                   </Typography>
                 </Box>
               </Grid>
               <Grid xs={12} item>
-                <Box>
+                <Box pb={{ xs: 3, sm: 2, md: 2, lg: 2, xl: 2 }}>
                   <Typography
                     variant="h4"
-                    className={`${classes.subtitle}`}
+                    className={`${classes.subtitle} transitions`}
                     color="textPrimary"
                     component="h2">
                     React Developer
@@ -174,7 +187,10 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 <Box p={2}>
                   <ButtonGroup fullWidth>
                     <Button onClick={() => setMenu(1)} className={classes.button}>
-                      <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                      <Typography
+                        className={`${classes.crsPointer} transitions`}
+                        variant="h5"
+                        component="h3">
                         <span
                           className={
                             menu === 1
@@ -195,9 +211,19 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                       </Typography>
                     </Button>
                   </ButtonGroup>
+                  <Box
+                    pt={1}
+                    pb={4}
+                    display={{ xs: menu === 1 ? 'block' : 'none', md: 'none' }}
+                    className="animated fadeIn">
+                    <HomeProfile dark={darkToggle.checked} theme={themeConfig} />
+                  </Box>
                   <ButtonGroup fullWidth>
                     <Button onClick={() => setMenu(3)} className={classes.button}>
-                      <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                      <Typography
+                        className={`transitions ${classes.crsPointer}`}
+                        variant="h5"
+                        component="h3">
                         <span
                           className={
                             menu === 3
@@ -218,9 +244,19 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                       </Typography>
                     </Button>
                   </ButtonGroup>
+                  <Box
+                    pt={1}
+                    pb={4}
+                    display={{ xs: menu === 3 ? 'block' : 'none', md: 'none' }}
+                    className="animated fadeIn">
+                    <HomeXP dark={darkToggle.checked} theme={themeConfig} />
+                  </Box>
                   <ButtonGroup fullWidth>
                     <Button onClick={() => setMenu(4)} className={classes.button}>
-                      <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
+                      <Typography
+                        className={`transitions ${classes.crsPointer}`}
+                        variant="h5"
+                        component="h3">
                         <span
                           className={
                             menu === 4
@@ -241,74 +277,47 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                       </Typography>
                     </Button>
                   </ButtonGroup>
-                  <ButtonGroup fullWidth>
-                    <Button onClick={() => setMenu(2)} className={`${classes.button}`}>
-                      <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
-                        <span
-                          className={
-                            menu === 2
-                              ? `transitions ${classes.details}`
-                              : `transitions ${classes.details} ${classes.vHidden}`
-                          }>
-                          {'<'}
-                        </span>
-                        {menu === 2 ? 'ForHire' : 'For Hire'}
-                        <span
-                          className={
-                            menu === 2
-                              ? `transitions ${classes.details}`
-                              : `transitions ${classes.details} ${classes.vHidden}`
-                          }>
-                          {' />'}
-                        </span>
-                      </Typography>
-                    </Button>
-                  </ButtonGroup>
-
-                  <Box display="none">
-                    <ButtonGroup fullWidth>
-                      <Button onClick={() => setMenu(0)} className={classes.button}>
-                        <Typography className={`${classes.crsPointer}`} variant="h5" component="h3">
-                          <span
-                            className={
-                              menu === 0
-                                ? `transitions ${classes.details}`
-                                : `transitions ${classes.details} ${classes.vHidden}`
-                            }>
-                            {'<'}
-                          </span>
-                          About
-                          <span
-                            className={
-                              menu === 0
-                                ? `transitions ${classes.details}`
-                                : `transitions ${classes.details} ${classes.vHidden}`
-                            }>
-                            {' />'}
-                          </span>
-                        </Typography>
-                      </Button>
-                    </ButtonGroup>
+                  <Box
+                    pt={1}
+                    pb={4}
+                    display={{ xs: menu === 4 ? 'block' : 'none', md: 'none' }}
+                    className="animated fadeIn">
+                    <HomeSkills dark={darkToggle.checked} />
                   </Box>
                 </Box>
                 <Box textAlign="center">
                   <Box display="inline-block">
-                    <Link href="/" color="textPrimary" onClick={preventDefault}>
-                      <i className={`${classes.link} fas fa-at fa-4x`} />
+                    <Link
+                      href="mailto:ricardoraposomota@gmail.com"
+                      title="Contact Ricardo via email"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="textPrimary">
+                      <i className={`transitions ${classes.link} fas fa-at fa-4x`} />
                     </Link>
                   </Box>
                   <Box mx={2} display="inline-block">
-                    <Link href="/" color="textPrimary" onClick={preventDefault}>
-                      <i className={`${classes.link} fab fa-linkedin fa-4x`} />
+                    <Link
+                      href="https://www.linkedin.com/in/ricardo-jrm/"
+                      title="Visit Ricardo's LinkedIn page"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="textPrimary">
+                      <i className={`transitions ${classes.link} fab fa-linkedin fa-4x`} />
                     </Link>
                   </Box>
                   <Box display="inline-block">
-                    <Link href="/" color="textPrimary" onClick={preventDefault}>
-                      <i className={`${classes.link} fab fa-github fa-4x`} />
+                    <Link
+                      href="https://github.com/ricardo-jrm"
+                      title="Visit Ricardo's Github page"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="textPrimary">
+                      <i className={`transitions ${classes.link} fab fa-github fa-4x`} />
                     </Link>
                   </Box>
                 </Box>
-                <Box textAlign="center" mt={2}>
+                <Box textAlign="center" mt={2} pb={{ xs: 4, md: 2 }}>
                   <ThemePopover
                     darkHook={{ darkToggle, setDarkToggle }}
                     themeHook={{ activeTheme, setActiveTheme }}
@@ -317,18 +326,12 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                 </Box>
               </Grid>
               <Grid xs={12} md={9} lg={8} item>
-                <Box className={classes.ovFlow} p={2}>
-                  <Box display={menu === 0 ? 'block' : 'none'} className="animated fadeIn">
-                    <HomeAbout />
-                  </Box>
+                <Box className={classes.ovFlow} display={{ xs: 'none', md: 'block' }} p={2}>
                   <Box display={menu === 1 ? 'block' : 'none'} className="animated fadeIn">
-                    <HomeProfile dark={darkToggle.checked} />
-                  </Box>
-                  <Box display={menu === 2 ? 'block' : 'none'} className="animated fadeIn">
-                    <HomeHire />
+                    <HomeProfile dark={darkToggle.checked} theme={themeConfig} />
                   </Box>
                   <Box display={menu === 3 ? 'block' : 'none'} className="animated fadeIn">
-                    <HomeXP dark={darkToggle.checked} />
+                    <HomeXP dark={darkToggle.checked} theme={themeConfig} />
                   </Box>
                   <Box display={menu === 4 ? 'block' : 'none'} className="animated fadeIn">
                     <HomeSkills dark={darkToggle.checked} />

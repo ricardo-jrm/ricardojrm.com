@@ -1,16 +1,32 @@
 ::selection {
-  background: rgba(221, 112, 165, 0.99) !important;
+  background: rgba(192, 192, 192, 0.99) !important;
   color: rgba(32, 32, 32, 1) !important;
   /* 101, 219, 154 */
 }
 
 ::-moz-selection {
-  background: rgba(221, 112, 165, 0.99) !important;
+  background: rgba(192, 192, 192, 0.99) !important;
   color: rgba(32, 32, 32, 1) !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .transitions {
   transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease !important;
+}
+
+.MuiPaper-root {
+  transition: color 0.3s ease, background-color 0.3s ease !important;
 }
 
 .bg-fixed {

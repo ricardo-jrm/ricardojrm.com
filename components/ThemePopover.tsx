@@ -71,14 +71,15 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
         size="large"
         className={classes.button}
         onClick={handleClick}
-        startIcon={<PaletteIcon />}>
-        <Typography color="textPrimary" variant="body1">
+        startIcon={<PaletteIcon className="transitions" />}>
+        <Typography className="transitions" color="textPrimary" variant="body1">
           Change Theme
         </Typography>
       </Button>
       <Popover
         id={id}
         open={open}
+        className="transitions"
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
@@ -91,7 +92,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
         }}>
         <Box px={4} py={2}>
           <Box pb={0.75}>
-            <Typography color="textPrimary" variant="h6">
+            <Typography className="transitions" color="textPrimary" variant="h6">
               Themes:
             </Typography>
             {array.map((theme: any) => {
@@ -100,22 +101,23 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                 <Box key={theme[0]}>
                   <Button
                     type="button"
+                    className={classes.button}
                     style={{ width: '100%' }}
                     onClick={() => handleTheme(theme)}>
                     <Box display="flex" alignItems="center" style={{ width: '100%' }} py={0.75}>
-                      <Box display="flex-start" textAlign="start" flexGrow={1} pr={5}>
-                        <Typography color="textPrimary" variant="body1">
-                          {theme[0]}
+                      <Box display="flex-start" textAlign="start" flexGrow={1} pr={3}>
+                        <Typography className="transitions" color="textPrimary" variant="body1">
+                          {theme[2]}
                         </Typography>
                       </Box>
                       <Box>
-                        <Grid container style={{ minWidth: '175px' }}>
+                        <Grid container style={{ minWidth: '100px' }}>
                           <Grid
                             item
                             xs={4}
                             style={{
                               backgroundColor: themeConfig.palette.primary.dark,
-                              height: '20px',
+                              height: '15px',
                             }}>
                             {' '}
                           </Grid>
@@ -124,7 +126,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                             xs={4}
                             style={{
                               backgroundColor: themeConfig.palette.primary.main,
-                              height: '20px',
+                              height: '15px',
                             }}>
                             {' '}
                           </Grid>
@@ -133,7 +135,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                             xs={4}
                             style={{
                               backgroundColor: themeConfig.palette.primary.light,
-                              height: '20px',
+                              height: '15px',
                             }}>
                             {' '}
                           </Grid>
@@ -142,7 +144,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                             xs={4}
                             style={{
                               backgroundColor: themeConfig.palette.secondary.dark,
-                              height: '20px',
+                              height: '15px',
                             }}>
                             {' '}
                           </Grid>
@@ -151,7 +153,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                             xs={4}
                             style={{
                               backgroundColor: themeConfig.palette.secondary.main,
-                              height: '20px',
+                              height: '15px',
                             }}>
                             {' '}
                           </Grid>
@@ -160,7 +162,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                             xs={4}
                             style={{
                               backgroundColor: themeConfig.palette.secondary.light,
-                              height: '20px',
+                              height: '15px',
                             }}>
                             {' '}
                           </Grid>
@@ -169,7 +171,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                             xs={4}
                             style={{
                               backgroundColor: themeConfig.palette.error.dark,
-                              height: '20px',
+                              height: '15px',
                             }}>
                             {' '}
                           </Grid>
@@ -178,7 +180,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                             xs={4}
                             style={{
                               backgroundColor: themeConfig.palette.error.main,
-                              height: '20px',
+                              height: '15px',
                             }}>
                             {' '}
                           </Grid>
@@ -187,7 +189,7 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                             xs={4}
                             style={{
                               backgroundColor: themeConfig.palette.error.light,
-                              height: '20px',
+                              height: '15px',
                             }}>
                             {' '}
                           </Grid> */}
@@ -200,12 +202,12 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
             })}
           </Box>
           <Box>
-            <Typography color="textPrimary" variant="h6">
+            <Typography className="transitions" color="textPrimary" variant="h6">
               Mode:
             </Typography>
             <Box display="flex" alignItems="center">
               <Box>
-                <Typography variant="body1" color="textPrimary">
+                <Typography className="transitions" variant="body1" color="textPrimary">
                   Light
                 </Typography>
               </Box>
@@ -214,11 +216,12 @@ const ThemePopover = ({ darkHook, themeHook, array }: IThemePopoverProps): any =
                   checked={darkHook.darkToggle.checked}
                   onChange={handleToggle('checked')}
                   value="checked"
+                  className="transitions"
                   inputProps={{ 'aria-label': 'secondary checkbox' }}
                 />
               </Box>
               <Box>
-                <Typography variant="body1" color="textPrimary">
+                <Typography className="transitions" variant="body1" color="textPrimary">
                   Dark
                 </Typography>
               </Box>

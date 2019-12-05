@@ -1,3 +1,27 @@
+import { createMuiTheme } from '@material-ui/core/styles';
+
+const defaultTheme = createMuiTheme();
+
+/*
+
+  [defaultTheme.breakpoints.down('xs')]: {
+    // fontSize: '3rem',
+  },
+  [defaultTheme.breakpoints.up('sm')]: {
+    // fontSize: '1rem'
+  },
+  [defaultTheme.breakpoints.up('md')]: {
+    // fontSize: '1rem'
+  },
+  [defaultTheme.breakpoints.up('lg')]: {
+    // fontSize: '1rem'
+  },
+  [defaultTheme.breakpoints.up('xl')]: {
+    // fontSize: '1rem'
+  },
+
+*/
+
 export default {
   fontFamily: [
     '-apple-system',
@@ -12,9 +36,13 @@ export default {
     '"Apple Color Emoji"',
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
+    '"Radiance-Distressed"',
   ].join(','),
   h1: {
     fontFamily: ['Radiance-Black'].join(','),
+    [defaultTheme.breakpoints.down('xs')]: {
+      fontSize: '3rem',
+    },
   },
   h2: {
     fontFamily: ['Radiance-Black'].join(','),
@@ -24,10 +52,16 @@ export default {
   },
   h4: {
     fontFamily: ['Radiance-Black'].join(','),
+    [defaultTheme.breakpoints.down('xs')]: {
+      fontSize: '1.85rem',
+    },
   },
   h5: {
     fontFamily: ['Radiance'].join(','),
     fontWeight: 600,
+    [defaultTheme.breakpoints.only('md')]: {
+      fontSize: '1.2rem',
+    },
   },
   h6: {
     fontWeight: 600,
@@ -35,5 +69,10 @@ export default {
   body1: {
     fontWeight: 500,
     fontSize: '1.1rem',
+  },
+  body2: {
+    fontSize: '0.97rem',
+    lineHeight: '1.7rem',
+    letterSpacing: '0.5px',
   },
 };
