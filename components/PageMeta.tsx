@@ -6,7 +6,7 @@ const PageMeta = ({  }: IPageMetaProps): any => {
     <Head>
       <title>RicardoJRM</title>
 
-      <meta name="description" content="React developer with a manbun" />
+      <meta name="description" content="React Developer looking for a challenging project" />
       <meta
         name="keywords"
         content="react, reactjs, developer, javascript, next, nextjs, materialui, material-ui, lisbon, portugal, for hire"
@@ -16,7 +16,7 @@ const PageMeta = ({  }: IPageMetaProps): any => {
 
       {/* Open Graph */}
 
-      <meta property="og:description" content="React Developer with a manbun" />
+      <meta property="og:description" content="React Developer looking for a challenging project" />
       {/* <meta
         property="og:image:secure_url"
         content="https://www.kfitnessstudio.com/static/openg/kfitness-openg.png"
@@ -99,7 +99,10 @@ const PageMeta = ({  }: IPageMetaProps): any => {
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="RicardoJRM" />
-      <meta name="twitter:description" content="React Developer with a manbun." />
+      <meta
+        name="twitter:description"
+        content="React Developer looking for a challenging project."
+      />
       <meta name="twitter:site" content="@ricardojrm7" />
       {/* <meta
         name="twitter:image"

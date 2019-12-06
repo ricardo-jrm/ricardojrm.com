@@ -25,7 +25,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         | '-moz-none'
         | 'element'
         | undefined,
-      cursor: 'pointer',
+      // cursor: 'pointer',
     },
     xpWrap: {
       marginRight: theme.spacing(1.2),
@@ -114,7 +114,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             projects and run a business that created bespoke web apps above market standards.
           </Typography>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            - HTML5 + CSS3 (Bootstrap 4)
+            - HTML5 + CSS3 (Bootstrap 4, SASS)
             <br />
             - JavaScript (React.js, Redux, Redux-Saga, Node.js, Express.js, Helmet.js, Webpack 4,
             Babel)
@@ -140,30 +140,35 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
           <Box className={`${classes.xpWrap}`} display="inline-block" alignContent="center">
-            <Link
-              href="https://www.freelancer.com/"
-              title="Freelancer"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="inherit">
-              <img
-                className={`${classes.xpImg}`}
-                src="/static/img/freelancer-logo.png"
-                title="Freelancer"
-                alt="Freelancer logo"
-              />
-            </Link>
+            <img
+              className={`${classes.xpImg}`}
+              src="/static/img/sycretink-logo.png"
+              title="Sycret.ink"
+              alt="Sycret.ink logo"
+            />
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="h6">
-              Freelancer
+              Sycret.ink
             </Typography>
             <Typography className="transitions" color="textPrimary" variant="body1">
-              Mobile Developer (React Native)
+              React Native Developer
             </Typography>
           </Box>
         </Box>
         <Box pt={1} pb={1.25}>
+          <Typography className="transitions" color="textPrimary" variant="body2">
+            Mobile chat app with end to end encryption in a serverless environment with extra
+            features, to be developed under contract with a team of 3 people (AWS Engineer / Lead,
+            Backend specialist, Mobile Developer) and I learned a lot about end to end encryption
+            protocols and mobile app deployment / version control from it.
+          </Typography>
+          <Typography className="transitions" color="textPrimary" variant="body2">
+            - React Native
+            <br />- libsignal-protocol
+          </Typography>
+        </Box>
+        <Box pt={1} pb={1.25} display="none">
           <Typography className="transitions" color="textPrimary" variant="body2">
             During this time I was aiming to sharpen my React skills and explore mobile development,
             so I created multiple apps as a freelancer using React Native. The most notable being a
