@@ -215,9 +215,9 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
           <Typography className="transitions" color="textPrimary" variant="body2">
             Created an admin dashboard to control American Heart Association&apos;s Kinect
             Integration that interfaced the users with the data collected, connected doctors and
-            their pacients, printed out reports and allowed superusers to manage the whole system.
+            their patients, printed out reports and allowed superusers to manage the whole system.
             This project was acquired through a university scholarship and I was free to work with
-            any technology, so I took this oportunity to apply what I was learning at the time and
+            any technology, so I took this opportunity to apply what I was learning at the time and
             built my first web app as a Full Stack Javascript Developer using React.js and Node.js.
           </Typography>
         </Box>
