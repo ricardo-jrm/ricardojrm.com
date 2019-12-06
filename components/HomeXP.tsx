@@ -159,7 +159,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         <Box pt={1} pb={1.25}>
           <Typography className="transitions" color="textPrimary" variant="body2">
             Mobile chat app with end to end encryption in a serverless environment with extra
-            features, to be developed under contract with a team of 3 people (AWS Engineer / Lead,
+            features, developed under contract with a team of 3 people (AWS Engineer / Lead,
             Backend specialist, Mobile Developer) and I learned a lot about end to end encryption
             protocols and mobile app deployment / version control from it.
           </Typography>
