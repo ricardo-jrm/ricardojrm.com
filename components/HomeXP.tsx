@@ -34,6 +34,11 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
       maxHeight: theme.typography.body2.fontSize,
       width: 'auto',
     },
+    ellipsis: {
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+    },
     label: {
       paddingLeft: theme.spacing(4),
       paddingRight: theme.spacing(4),
@@ -49,8 +54,8 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
   const pathLogo = dark ? 'logo-i' : 'logo';
   return (
     <Box>
-      <Box py={2}>
-        <Typography className="transitions" color="textPrimary" variant="h5">
+      <Box py={2} display="none">
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
           <span className={`transitions ${classes.label}`}>Current</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
@@ -80,8 +85,8 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
       </Box>
       <Box py={2}>
-        <Typography className="transitions" color="textPrimary" variant="h5">
-          <span className={`transitions ${classes.label}`}>2018-2019</span>
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
+          <span className={`transitions ${classes.label}`}>Glaiveware</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
           <Box className={`${classes.xpWrap}`} pt={0.75} display="inline-block">
@@ -101,10 +106,10 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="h6">
-              Glaiveware
+              Full Stack Javascript Developer, Co-Founder
             </Typography>
             <Typography className="transitions" color="textPrimary" variant="body1">
-              Full Stack Developer, Project Manager, Business owner & Co-Founder
+              Mar 2018 - Dec 2019
             </Typography>
           </Box>
         </Box>
@@ -119,11 +124,11 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             - JavaScript (React.js, Redux, Redux-Saga, Node.js, Express.js, Helmet.js, Webpack 4,
             Babel)
             <br />
-            - Database (Firebase, MySQL)
+            - Database (Firebase, MySQL, SQLite)
             <br />
             - Ubuntu (nginx)
             <br />
-            - AWS (EC2, SES)
+            - AWS (EC2, S3, SES, API Gateway, Lambda)
             <br />
             - SEO & SEM
             <br />
@@ -135,8 +140,8 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
       </Box>
       <Box py={2}>
-        <Typography className="transitions" color="textPrimary" variant="h5">
-          <span className={`transitions ${classes.label}`}>2017</span>
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
+          <span className={`transitions ${classes.label}`}>Sycret.ink</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
           <Box className={`${classes.xpWrap}`} display="inline-block" alignContent="center">
@@ -149,10 +154,10 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="h6">
-              Sycret.ink
+              React Native Developer
             </Typography>
             <Typography className="transitions" color="textPrimary" variant="body1">
-              React Native Developer
+              Jan 2017 - Dec 2017
             </Typography>
           </Box>
         </Box>
@@ -170,8 +175,8 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             <br />
             - Android Studio
             <br />
-            - AWS (S3, Lambda)
-            <br />- MongoDB
+            - AWS (API Gateway, Lambda)
+            <br />- SQLite
           </Typography>
         </Box>
         <Box pt={1} pb={1.25} display="none">
@@ -192,6 +197,11 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             deployment / version control from it.
           </Typography>
         </Box>
+      </Box>
+      <Box py={2}>
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
+          <span className={`transitions ${classes.label}`}>American Heart Association</span>
+        </Typography>
         <Box display="flex" alignItems="center" pt={2}>
           <Box className={`${classes.xpWrap}`} display="inline-block">
             <Link
@@ -210,10 +220,10 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="h6">
-              American Heart Association
+              Full Stack Javascript Developer
             </Typography>
             <Typography className="transitions" color="textPrimary" variant="body1">
-              Full Stack Javascript Developer
+              Sep 2016 - Dec 2016
             </Typography>
           </Box>
         </Box>
@@ -229,8 +239,8 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
       </Box>
       <Box py={2}>
-        <Typography className="transitions" color="textPrimary" variant="h5">
-          <span className={`transitions ${classes.label}`}>2016</span>
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
+          <span className={`transitions ${classes.label}`}>NextBitt Business Technologies</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
           <Box className={`${classes.xpWrap}`} display="inline-block">
@@ -250,10 +260,10 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="h6">
-              NextBitt Business Technologies
+              Frontend Developer
             </Typography>
             <Typography className="transitions" color="textPrimary" variant="body1">
-              Frontend Developer
+              Oct 2015 - Jul 2016
             </Typography>
           </Box>
         </Box>
@@ -409,25 +419,11 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             </Link>
             )
           </Typography>
-          <Box display="none">
-            <Box py={0.75}>
-              <Typography className="transitions" color="textPrimary" variant="body2">
-                This was the place where I grew the most as a web developer, as I was first hired
-                with little JQuery and Bootstrap experience and a few months later was leading the
-                team using Angular.js (...)
-              </Typography>
-            </Box>
-            <Typography className="transitions" color="textPrimary" variant="body2">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut eos placeat quod fuga
-              blanditiis doloribus consequuntur architecto! Optio accusantium impedit praesentium,
-              sapiente modi dignissimos consequuntur tempora ab consectetur quaerat amet?
-            </Typography>
-          </Box>
         </Box>
       </Box>
       <Box py={2}>
-        <Typography className="transitions" color="textPrimary" variant="h5">
-          <span className={`transitions ${classes.label}`}>2015</span>
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
+          <span className={`transitions ${classes.label}`}>Science4you</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
           <Box className={`${classes.xpWrap}`} display="inline-block">
@@ -447,10 +443,10 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="h6">
-              Science4you
+              Java Developer
             </Typography>
             <Typography className="transitions" color="textPrimary" variant="body1">
-              Java Developer
+              Jan 2015 - Mar 2015
             </Typography>
           </Box>
         </Box>
@@ -463,27 +459,6 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
             control the online store&apos;s orders, print detailed reports and send automated emails
             to the customer, all of which were previously handled by hand.
           </Typography>
-          <Box display="none">
-            <Box py={0.75}>
-              <Typography className="transitions" color="textPrimary" variant="body2">
-                I was still a greenthorn with no professional experience and was very fortunate to
-                find such an awesome environment where I got to meet great people that I learned
-                from and helped me ease into the team workflow, especially my boss Hugo Morais who
-                dedicated an entire day to teach me Git himself, continued to teach me about web
-                technologies (such as all the inner workings of Apache, PHP, and MySQL) and even
-                advanced concepts like regular expressions. This was the experience that influenced
-                me to pursue development as a career and built my work environment values, that I
-                carry in hopes of making my fellow team members feel the same way I did when I first
-                started.
-              </Typography>
-            </Box>
-            <Typography className="transitions" color="textPrimary" variant="body2">
-              Eventually moved on seeking more web focused projects, specifically in Javascript
-              which I was falling for harder every day as I learned it, and proportionally hating
-              Java more and more which was my main language and the codebase I was working on at the
-              time.
-            </Typography>
-          </Box>
         </Box>
       </Box>
     </Box>
