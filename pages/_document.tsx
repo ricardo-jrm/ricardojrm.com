@@ -66,11 +66,15 @@ class MyDocument extends Document {
           />
 
           <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css"
+            rel="stylesheet"
+          />
+          {/* <link
             href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
             integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
             crossOrigin="anonymous"
             rel="stylesheet"
-          />
+          /> */}
 
           <link href="/static/styles/fonts.css" rel="stylesheet" />
           <link href="/static/styles/main.css" rel="stylesheet" />
