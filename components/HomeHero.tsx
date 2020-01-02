@@ -286,34 +286,44 @@ const HomeHero = ({  }: IHomeHeroProps): any => {
                   </Box>
                 </Box>
                 <Box textAlign="center">
-                  <Box display="inline-block">
+                  <Box mx={1} display="inline-block">
+                    <Link
+                      href="/static/files/RicardoMota_CV_EN.pdf"
+                      title="Go to my Curriculum Vitae"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="textPrimary">
+                      <i className={`transitions ${classes.link} fas fa-scroll fa-3x`} />
+                    </Link>
+                  </Box>
+                  <Box mx={1} display="inline-block">
                     <Link
                       href="mailto:ricardoraposomota@gmail.com"
-                      title="Contact Ricardo via email"
+                      title="Contact me via email"
                       target="_blank"
                       rel="noopener noreferrer"
                       color="textPrimary">
-                      <i className={`transitions ${classes.link} fas fa-at fa-4x`} />
+                      <i className={`transitions ${classes.link} fas fa-at fa-3x`} />
                     </Link>
                   </Box>
-                  <Box mx={2} display="inline-block">
-                    <Link
-                      href="https://www.linkedin.com/in/ricardo-jrm/"
-                      title="Visit Ricardo's LinkedIn page"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      color="textPrimary">
-                      <i className={`transitions ${classes.link} fab fa-linkedin fa-4x`} />
-                    </Link>
-                  </Box>
-                  <Box display="inline-block">
+                  <Box mx={1} display="inline-block">
                     <Link
                       href="https://github.com/ricardo-jrm"
-                      title="Visit Ricardo's Github page"
+                      title="Visit my Github page"
                       target="_blank"
                       rel="noopener noreferrer"
                       color="textPrimary">
-                      <i className={`transitions ${classes.link} fab fa-github fa-4x`} />
+                      <i className={`transitions ${classes.link} fab fa-github fa-3x`} />
+                    </Link>
+                  </Box>
+                  <Box mx={1} display="inline-block">
+                    <Link
+                      href="https://www.linkedin.com/in/ricardo-jrm/"
+                      title="Visit my LinkedIn page"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="textPrimary">
+                      <i className={`transitions ${classes.link} fab fa-linkedin fa-3x`} />
                     </Link>
                   </Box>
                 </Box>
