@@ -57,14 +57,51 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
   return (
     <Grid container>
       <Grid item xs={12}>
-        <Box pb={2}>
+        <Box pb={5}>
           <Typography className="transitions" color="textPrimary" variant="body2">
-            React developer looking for a full-time remote position, where I can work on challenging
-            projects and apply my agile web development experience to contribute to the growth
-            and productivity of your company.{' '}
-            {/* Not only am I able to work with cutting edge frontend
-            technologies (React.js, Next.js, Material-UI, Typescript), but am also open to teach,
-            mentor and lead any team willing to learn about them. */}
+            Hello, I&apos;m Ricardo, a mid level Javascript developer looking for the right place to
+            transition to senior. A place with a familiar environment where I can see myself long
+            term, build a career, keep learning new things, teach what I already know, and be part
+            of a team that shares the same mindset.
+            <br />
+            <br />
+            I dropped out of school to take a shot at running a business with a good old friend of
+            mine while we were still young, and after two years we decided to sell it. Mainly
+            because we felt that we had already learned the most we could, and was time to move on
+            from that adventure to focus solely on development.
+            <br />
+            <br />
+            I&apos;m super specialized in Javascript and am primarily looking for positions where I
+            can make use of those skills, specifically Frontend Engineer (React) or Full Stack
+            (Node/Next). If I&apos;m able to work using Typescript and Material-UI I&apos;ll be even
+            happier since those are the frameworks I&apos;ve been learning for the last year. My
+            ideal projects are UI Development (Storybook, Dashboarding, Data Visualization) and
+            Feature Development (For tools and software).
+            <br />
+            <br />
+            I know and have been using systems like Git and SCRUM, and other source control / agile
+            development systems for many years.
+            <br />
+            <br />
+            My weakest point by far is testing. To be honest it&apos;s just something I&apos;ve
+            never previously used and only recently started working with (Mocha, Jest, Enzyme), but
+            never had any actual professional experience and am eager to learn more about it. Also
+            uncommon CSS captures, if you want to trap me in the interview that&apos;s a good way to
+            do it!
+            <br />
+            <br />
+            I&apos;m mainly looking for in-house or nearshore projects. I&apos;d love to work with
+            international teams once again, but I&apos;m not a big fan of having to travel regularly
+            / relocate. What I&apos;m NOT looking for is the typical outsourcing / contracting deal,
+            it&apos;s just something I&apos;ve grown out of, hope you can understand.
+            <br />
+            <br />
+            Other than that I just need to say that I feel ready to take on a challenging project
+            and apply not only my agile development skills, but everything I&apos;ve learned to
+            contribute to the growth and productivity of your company.
+            <br />
+            <br />
+            Have a nice day!
           </Typography>
         </Box>
       </Grid>
@@ -79,7 +116,7 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
             color="textPrimary"
             variant="body1">
             {/* <i className={`fas fa-chevron-right ${classes.detail}`} /> */}
-            React developer
+            Javascript Developer
           </Typography>
         </Box>
         <Box
@@ -92,7 +129,7 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
             color="textPrimary"
             variant="body1">
             {/* <i className={`fas fa-chevron-right ${classes.detail}`} /> */}
-            Full-time & full remote
+            UI & Feature Development
           </Typography>
         </Box>
         <Box
@@ -112,7 +149,8 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
           display="flex"
           className={`${classes.profBox}`}
           alignItems="center"
-          justifyContent="center">
+          justifyContent="center"
+          mb={5}>
           <Typography
             className={`${classes.subtitle} transitions`}
             color="textPrimary"
@@ -141,7 +179,7 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
           </Box>
           <Box display="inline-block">
             <Typography className="transitions" color="textPrimary" variant="body1">
-              React.js (3+ years)
+              React.js
             </Typography>
           </Box>
         </Box>
@@ -192,7 +230,7 @@ const HomeProfile = ({ dark, theme }: IHomeProfileProps): any => {
           </Box>
         </Box>
 
-        <Box display="flex" className={`${classes.profBox}`} alignItems="center">
+        <Box display="flex" className={`${classes.profBox}`} alignItems="center" mb={5}>
           <Box display="inline-block">
             <Link
               href="https://www.typescriptlang.org/"
