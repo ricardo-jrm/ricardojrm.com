@@ -34,6 +34,11 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
       maxHeight: theme.typography.body2.fontSize,
       width: 'auto',
     },
+    ellipsis: {
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+    },
     label: {
       paddingLeft: theme.spacing(4),
       paddingRight: theme.spacing(4),
@@ -50,7 +55,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
   return (
     <Box>
       <Box py={2} display="none">
-        <Typography className="transitions" color="textPrimary" variant="h5">
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
           <span className={`transitions ${classes.label}`}>Current</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
@@ -80,7 +85,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
       </Box>
       <Box py={2}>
-        <Typography className="transitions" color="textPrimary" variant="h5">
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
           <span className={`transitions ${classes.label}`}>Glaiveware</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
@@ -135,7 +140,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
       </Box>
       <Box py={2}>
-        <Typography className="transitions" color="textPrimary" variant="h5">
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
           <span className={`transitions ${classes.label}`}>Sycret.ink</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
@@ -194,7 +199,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
       </Box>
       <Box py={2}>
-        <Typography className="transitions" color="textPrimary" variant="h5">
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
           <span className={`transitions ${classes.label}`}>American Heart Association</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
@@ -234,7 +239,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
       </Box>
       <Box py={2}>
-        <Typography className="transitions" color="textPrimary" variant="h5">
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
           <span className={`transitions ${classes.label}`}>NextBitt Business Technologies</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
@@ -417,7 +422,7 @@ const HomeXP = ({ dark, theme }: IHomeXPProps): any => {
         </Box>
       </Box>
       <Box py={2}>
-        <Typography className="transitions" color="textPrimary" variant="h5">
+        <Typography className={`transitions ${classes.ellipsis}`} color="textPrimary" variant="h5">
           <span className={`transitions ${classes.label}`}>Science4you</span>
         </Typography>
         <Box display="flex" alignItems="center" pt={2}>
